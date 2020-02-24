@@ -1,0 +1,99 @@
+/* Widget - Chat List */
+
+.chats {
+    list-style-type: none;
+    margin: 0;
+    padding: 12px 15px 15px;
+    
+	& > li + li,
+	& > div + div {
+		margin-top: 15px;
+	}
+	& > li:before,
+	& > li:after,
+	& > div:before,
+	& > div:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	& .name {
+		color: @black_lighter;
+		display: block;
+		margin-bottom: 5px;
+		font-weight: 600;
+		text-decoration: none;
+		
+		& .label {
+			font-size: 8px;
+			padding: 1px 4px 2px;
+			margin-left: 3px;
+			position: relative;
+			top: -1px;
+		}
+	}
+	& .date-time {
+		font-size: 10px;
+		display: block;
+		float: right;
+		color: #999;
+		margin-top: 3px;
+	}
+	& .image {
+		float: left;
+		width: 60px;
+		height: 60px;
+		border-radius: 4px;
+		overflow: hidden;
+		
+		& img {
+			max-width: 100%;
+		}
+		& + .message {
+			margin-left: 75px;
+		}
+	}
+	& .message {
+		padding: 7px 12px;
+		font-size: 12px;
+		position: relative;
+		background: #fff;
+		border-radius: 14px;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			top: 15px;
+			left: -13px;
+			border: 7px solid transparent;
+			border-right-color: #fff;
+		}
+	}
+	& .right .name {
+		text-align: right;
+	}
+	& .right .date-time {
+		float: left;
+	}
+	& .right .image {
+		float: right;
+		
+		& + .message {
+			margin-right: 75px;
+			margin-left: 0;
+		}
+	}
+	& .right .message:before {
+		left: auto;
+		right: -13px;
+		border-right-color: transparent;
+		border-left-color: #fff;
+	}
+}
+
+.panel-body .chats {
+    padding: 0;
+}
+.slimScrollDiv .chats {
+    padding-right: 15px;
+}

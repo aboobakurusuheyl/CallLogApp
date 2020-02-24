@@ -1,0 +1,216 @@
+/* Component - Button */
+.btn {
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 6px 12px;
+    transition: all .1s ease-in-out;
+    outline: none !important;
+    box-shadow: none !important;
+    
+	&:focus, 
+	&:active:focus, 
+	&.active:focus {
+		outline: none;
+	}
+	&:active,
+	&.active {
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
+	}
+	&.btn-sm {
+		font-size: 12px;
+		line-height: 16px;
+		padding: 5px 10px;
+	}
+	&.btn-xs {
+		font-size: 12px;
+		line-height: 18px;
+		padding: 1px 5px;
+	}
+	&[class*="btn-gradient-"] {
+		transition: background .1s linear;
+	}
+	& > .pull-left, 
+	& > .pull-right {
+		line-height: 1.428571429;
+	}
+}
+.btn-block {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.btn.btn-lg,
+.input-group-lg > .input-group-append > .btn,
+.input-group-lg > .input-group-prepend > .btn {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 10px 16px;
+}
+.btn-icon,
+.btn.btn-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+}
+.btn-circle,
+.btn.btn-circle {
+    border-radius: 100px;
+}
+.btn-icon.btn-xs {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+    line-height: 16px;
+}
+.btn-icon.btn-sm {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    line-height: 22px;
+}
+.btn.btn-icon.btn-lg {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+    line-height: 34px;
+}
+.btn-scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1020;
+}
+.page-with-right-sidebar .btn-scroll-to-top {
+    left: 25px;
+    right: auto;
+}
+.input-group-prepend .btn {
+	border-right: 1px solid;
+}
+.input-group-append .btn {
+	border-left: 1px solid;
+}
+
+/* Component - Button - Inverse */
+.generate-button-styling(btn-inverse; @black; #fff; #191919);
+
+/* Component - Button - Primary */
+.generate-button-styling(btn-primary; @blue; #fff; @blue_darker);
+
+/* Component - Button - Success */
+.generate-button-styling(btn-success; @green; #fff; @green_darker);
+
+/* Component - Button - Warning */
+.generate-button-styling(btn-warning; @orange; #fff; @orange_darker);
+
+/* Component - Button - Danger */
+.generate-button-styling(btn-danger; @red; #fff; @red_darker);
+
+/* Component - Button - Info */
+.generate-button-styling(btn-info; @aqua; #fff; @aqua_darker);
+
+/* Component - Button - Purple */
+.generate-button-styling(btn-purple; #5856D6; #fff; #4240a0);
+
+/* Component - Button - Yellow */
+.generate-button-styling(btn-yellow; #ffd900; #000; #bfa300);
+
+/* Component - Button - Grey */
+.generate-button-styling(btn-grey; @grey; #fff; @grey_darker);
+
+/* Component - Button - White */
+.btn.btn-white,
+.btn.btn-white.disabled,
+.btn.btn-white.disabled:hover,
+.btn.btn-white.disabled:focus,
+.btn.btn-white[disabled],
+.btn.btn-white[disabled]:hover,
+.btn.btn-white[disabled]:focus {
+    color: #000;
+    background: #fff;
+    border-color: #ddd;
+}
+.btn.btn-white.btn-white-without-border {
+    border-color: #fff;
+}
+.btn.btn-white.btn-white-without-border.active,
+.btn.btn-white.btn-white-without-border.active:hover,
+.btn.btn-white.btn-white-without-border.active:focus {
+    border-color: #ccc;
+}
+.btn.btn-white.btn-white-without-border:hover,
+.btn.btn-white.btn-white-without-border:focus {
+    border-color: #ccc;
+}
+.btn-white:hover, 
+.btn-white:focus, 
+.btn-white:active, 
+.btn-white.active,
+.btn-white.active.focus, 
+.btn-white.active:focus, 
+.btn-white.active:hover, 
+.btn-white:active.focus, 
+.btn-white:active:focus, 
+.btn-white:active:hover,
+.show > .btn-white.dropdown-toggle,
+.open > .dropdown-toggle.btn-white,
+.open > .dropdown-toggle.btn-white:hover,
+.open > .dropdown-toggle.btn-white:focus,
+.btn-white:not(:disabled):not(.disabled).active, 
+.btn-white:not(:disabled):not(.disabled):active {
+    background: @silver_darker;
+    border-color: #ccc;
+}
+.input-group-append .btn.btn-white,
+.btn-group .btn.btn-white:not(.active) + .btn.btn-white,
+.input-group-btn .btn.btn-white:not(.active) + .btn.btn-white {
+    border-left-color: #ccc;
+}
+.input-group-prepend .btn.btn-white {
+    border-right-color: #ccc;
+}
+
+/* Component - Button - Default */
+.btn.btn-default,
+.btn.btn-default.disabled,
+.btn.btn-default.disabled:hover,
+.btn.btn-default.disabled:focus,
+.btn.btn-default[disabled],
+.btn.btn-default[disabled]:hover,
+.btn.btn-default[disabled]:focus {
+	color: #000;
+    background: #fff;
+    border-color: #ddd;
+}
+.btn-default:hover, 
+.btn-default:focus, 
+.btn-default:active, 
+.btn-default.active, 
+.btn-default.active.focus, 
+.btn-default.active:focus, 
+.btn-default.active:hover, 
+.btn-default:active.focus, 
+.btn-default:active:focus, 
+.btn-default:active:hover,
+.show > .btn-default.dropdown-toggle,
+.open > .dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:not(:disabled):not(.disabled).active, 
+.btn-default:not(:disabled):not(.disabled):active {
+    background: @silver_darker;
+    border-color: #ccc;
+}
+.input-group-append .btn.btn-default,
+.btn-group .btn.btn-default:not(.active) + .btn.btn-default,
+.input-group-btn .btn.btn-default:not(.active) + .btn.btn-default {
+    border-left-color: #ccc;
+}
+.input-group-prepend .btn.btn-default {
+    border-right-color: #ccc;
+}

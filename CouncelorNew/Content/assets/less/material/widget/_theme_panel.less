@@ -1,0 +1,101 @@
+/* Widget - Theme Panel */
+
+.theme-panel {
+    position: fixed;
+    right: -175px;
+    top: 150px;
+    z-index: 1020;
+    background: #fff;
+    padding: 15px;
+    width: 175px;
+    transition: right .2s linear;
+    border-radius: 4px 0 0 4px;
+}
+.theme-panel.active {
+    right: 0;
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.3);
+}
+.theme-panel .theme-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.theme-panel .theme-list + .theme-list {
+    margin-top: 10px;
+}
+.theme-panel .theme-list > li {
+    float: left;
+}
+.theme-panel .theme-list > li + li {
+    margin-left: 5px;
+}
+.theme-panel .theme-list > li > a {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    display: block;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+.theme-panel .theme-list > li > a:hover,
+.theme-panel .theme-list > li > a:focus {
+    opacity: 0.6;
+}
+.theme-panel .theme-list > li.active > a  {
+    position: relative;
+}
+.theme-panel .theme-list > li.active > a:before {
+    content: '\f00c';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.4;
+    text-align: center;
+}
+.theme-panel .theme-list > li.active > a.bg-white:before {
+    color: #666;
+}
+.theme-panel .theme-collapse-btn {
+    position: absolute;
+    left: -30px;
+    top: 10%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #333;
+    background: #fff;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+}
+.theme-panel .theme-panel-content {
+    margin: -15px;
+    padding: 15px;
+    background: #fff;
+    position: relative;
+    z-index: 1020;
+    border-radius: 5px 0 0 5px;
+}
+.theme-panel.active .theme-collapse-btn .fa:before {
+    content: '\f00d';
+}
+.theme-panel .theme-list a.bg-white {
+    border: 1px solid #e2e7eb;
+}
+.theme-panel .control-label {
+    line-height: 30px;
+}
+.theme-panel .control-label.double-line {
+    line-height: 15px;
+}
+.theme-panel .divider {
+    height: 1px;
+    margin: 15px 0;
+    background: #f2f2f2;
+}

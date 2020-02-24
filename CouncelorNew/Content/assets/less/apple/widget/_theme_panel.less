@@ -1,0 +1,109 @@
+/* Widget - Theme Panel */
+
+.theme-panel {
+    position: fixed;
+    right: -200px;
+    top: 150px;
+    z-index: 1020;
+    background: #fff;
+    padding: 15px;
+    width: 200px;
+    transition: right .2s linear;
+    border-radius: 4px 0 0 4px;
+	
+	&.active {
+		right: 0;
+		box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.3);
+	}
+	& .theme-list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		& + .theme-list {
+			margin-top: 10px;
+		}
+		& > li {
+			float: left;
+		
+			& + li {
+				margin-left: 5px;
+			}
+			& > a {
+				width: 24px;
+				height: 24px;
+				border-radius: 20px;
+				display: block;
+				transition: all .2s linear;
+				text-decoration: none;
+			
+				&:hover,
+				&:focus {
+					opacity: 0.6;
+				}
+			}
+			&.active > a  {
+				position: relative;
+		
+				&:before {
+					content: '\f3fd';
+					font-family: Ionicons !important;
+					font-weight: normal !important;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					font-size: 24px;
+					color: #fff;
+					line-height: 24px;
+					text-align: center;
+				}
+				&.bg-white:before {
+					color: #666;
+				}
+			}
+		}
+	}
+	& .theme-collapse-btn {
+		position: absolute;
+		left: -36px;
+		top: 10%;
+		margin-top: -5px;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		font-size: 24px;
+		color: @black_lighter;
+		background: #fff;
+		border-radius: 4px 0 0 4px;
+		text-align: center;
+		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+	}
+	& .theme-panel-content {
+		margin: -15px;
+		padding: 15px;
+		background: #fff;
+		position: relative;
+		z-index: 1020;
+		border-radius: 5px 0 0 5px;
+	}
+	&.active .theme-collapse-btn .fa:before {
+		content: '\f00d';
+	}
+	& .theme-list a.bg-white {
+		border: 1px solid #e2e7eb;
+	}
+	& .control-label {
+		line-height: 30px;
+		
+		&.double-line {
+			line-height: 15px;
+		}
+	}
+	& .divider {
+		height: 1px;
+		margin: 15px 0;
+		background: #f2f2f2;
+	}
+}

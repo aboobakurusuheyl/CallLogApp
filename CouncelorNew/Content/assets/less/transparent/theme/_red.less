@@ -1,0 +1,64 @@
+/* Theme - Red */
+
+.header .navbar-nav > li > a .label,
+.label.label-theme,
+.btn.btn-scroll-to-top {
+    background: @red;
+}
+.header.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+.text-theme {
+    color: @red;
+}
+a,
+.breadcrumb > li a {
+    color: #ff8c77;
+}
+a:hover,
+a:focus,
+.breadcrumb > li a:hover,
+.breadcrumb > li a:focus {
+	color: #fdb7aa;
+}
+
+
+/* Added in v1.5 */
+
+.gradient-enabled .sidebar .nav > li.active > a, 
+.gradient-enabled .sidebar .nav > li.active > a:focus, 
+.gradient-enabled .sidebar .nav > li.active > a:hover,
+.gradient-enabled .header .navbar-nav > li > a .label,
+.gradient-enabled.page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a, 
+.gradient-enabled.page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a, 
+.gradient-enabled.page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
+.gradient-enabled .label.label-theme,
+.gradient-enabled .btn.btn-scroll-to-top,
+.gradient-enabled .top-menu .nav > li.active > a, 
+.gradient-enabled .top-menu .nav > li.active > a:focus, 
+.gradient-enabled .top-menu .nav > li.active > a:hover {
+	color: #fff !important;
+	background: rgb(255,104,65) !important;
+	background: -moz-linear-gradient(top, rgba(255,104,65,1) 0%, rgba(191,40,1,1) 100%) !important;
+	background: -webkit-linear-gradient(top, rgba(255,104,65,1) 0%,rgba(191,40,1,1) 100%) !important;
+	background: linear-gradient(to bottom, rgba(255,104,65,1) 0%,rgba(191,40,1,1) 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@red_lighter', endColorstr='@red_darker',GradientType=0 ) !important;
+}
+.gradient-enabled .sidebar .nav > li.active > a {
+	z-index: 10;
+}
+.pace-progress {
+    background: @red;
+}
+.pace .pace-activity {
+    border-top-color: @red;
+    border-left-color: @red;
+}
+
+/* Added in v1.9 */
+
+.top-menu .nav > li.active > a i, 
+.top-menu .nav > li.active > a:focus i, 
+.top-menu .nav > li.active > a:hover i {
+    color: @red;
+}

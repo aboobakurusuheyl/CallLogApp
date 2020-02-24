@@ -1,0 +1,55 @@
+/* Plugin - Highlight JS */
+
+.hljs-wrapper {
+    background: #f1f1f1;
+    border-radius: 3px;
+
+	& pre {
+		border: none;
+		padding: 0;
+		background: none;
+		border-radius: 0;
+	}
+	& .hljs {
+		padding: 15px;
+		border-radius: 0;
+		display: block;
+		overflow-x: auto;
+		color: #242a31;
+		border: none;
+		font-size: 12px;
+		background: none;
+		border-radius: 0;
+	}
+	& .hljs-tag,
+	& .hljs-section, 
+	& .hljs-name, 
+	& .hljs-selector-tag, 
+	& .hljs-deletion, 
+	& .hljs-subst {
+		color: #2b71b5;
+	}
+	& .hljs-attr, 
+	& .hljs-variable, 
+	& .hljs-template-variable, 
+	& .hljs-type, 
+	& .hljs-selector-class, 
+	& .hljs-selector-attr, 
+	& .hljs-selector-pseudo, 
+	& .hljs-number {
+		color: #4ea2d4;
+	}
+	& .hljs-string, 
+	& .hljs-regexp, 
+	& .hljs-addition, 
+	& .hljs-attribute,
+	& .hljs-meta-string {
+		color: @red;
+	}
+}
+.hljs-comment {
+	color: #728088;
+}
+.panel-body + .hljs-wrapper {
+	border-radius: 0 0 3px 3px;
+}

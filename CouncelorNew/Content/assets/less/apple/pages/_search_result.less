@@ -1,0 +1,108 @@
+/* Pages - Search Results */
+
+.result-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .clearfix();
+    
+	& > li {
+		background: #fff;
+		box-shadow: 0 1px #ccc;
+		border-radius: 3px;
+		overflow: hidden;
+		.clearfix();
+		
+		& + li {
+			margin-top: 10px;
+		}
+		& > div {
+			display: table-cell;
+			vertical-align: top;
+			padding: 20px;
+			position: relative;
+		}
+	}
+	& .result-image {
+		width: 240px;
+		padding: 0;
+		overflow: hidden;
+		background: @black;
+		vertical-align: middle;
+		display: table-cell;
+		background-size: cover;
+		background-position: center;
+		
+		& a {
+			display: block;
+
+			&:hover,
+			&:focus {
+				opacity: 0.8;
+			}
+		}
+		& img {
+			width: 100%;
+		}
+	}
+	& .title {
+		margin: 0 0 0px;
+		font-size: 18px;
+		line-height: 26px;
+		
+		& a {
+			color: @black;
+		}
+	}
+	& .location {
+		color: #929ba1;
+		margin-bottom: 15px;
+	}
+	& .desc {
+		margin-bottom: 20px;
+		max-height: 32px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: 16px;
+	}
+	& .btn-row {
+		.clearfix();
+		
+		a {
+			color: @black;
+			font-size: 14px;
+			line-height: 18px;
+			float: left;
+			padding: 8px 10px;
+			border-radius: 4px;
+			background: #f1f1f1;
+		
+			&:hover,
+			&:focus {
+				opacity: 1;
+			}
+			& + a {
+				margin-left: 5px;
+			}
+		}
+	}
+	& .result-price {
+		width: 240px;
+		font-size: 28px;
+		text-align: center;
+		background: #f1f1f1;
+		color: @black;
+		vertical-align: middle;
+		
+		& small {
+			display: block;
+			font-size: 10px;
+			font-weight: 600;
+			color: #929ba1;
+		}
+		& .btn {
+			margin-top: 30px;
+		}
+	}
+}

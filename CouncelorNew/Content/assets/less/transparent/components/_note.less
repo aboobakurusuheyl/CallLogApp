@@ -1,0 +1,65 @@
+/* Component - Note Setting */
+
+.note {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 3px solid rgba(0,0,0,0.25);
+    position: relative;
+	border-radius: 4px;
+}
+.panel > .note {
+	border-radius: 0;
+}
+.note h1,
+.note h2,
+.note h3,
+.note h4,
+.note h5,
+.note h6 {
+	color: inherit;
+}
+.note .note-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 80px;
+	font-size: 56px;
+	line-height: 56px;
+	text-align: center;
+	background: rgba(0,0,0,0.25);
+}
+.note .note-icon > i {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	margin-top: -28px;
+}
+.note .note-icon + .note-content {
+	margin-left: 85px;
+}
+.note.note-with-right-icon {
+	border-left: none;
+	border-right: 3px solid rgba(0,0,0,0.25);
+}
+.note.note-with-right-icon .note-icon {
+	left: auto;
+	right: 0;
+}
+.note.note-with-right-icon .note-content {
+	margin-left: 0;
+	margin-right: 85px;
+}
+
+.note.note-danger { background: @red; color: #fff; }
+.note.note-warning { background: #FF7C00; color: #fff; }
+.note.note-yellow { background: @yellow; color: @black; }
+.note.note-lime { background: @lime; color: #202700; }
+.note.note-success { background: #33fa02; color: #072600; }
+.note.note-primary { background: #00C8FF; color: #001D26; }
+.note.note-info { background: #3bf0f0; color: #022427; }
+.note.note-purple { background: #d291fe; color: #1f0040; }
+.note.note-dark, .note.note-inverse { background: rgba(0,0,0,0.25); color: #fff; }
+.note.note-secondary, .note.note-default { background: @grey; color: #fff; }
+.note.note-light { background: #fff; color: #333; }

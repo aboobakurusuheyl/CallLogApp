@@ -1,0 +1,58 @@
+/* Widget - Todolist */
+
+.todolist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    & > li {
+		border-bottom: 1px solid #ddd;
+		
+		& > a {
+			display: block;
+			color: @black_lighter;
+		}
+		& > a:hover,
+		& > a:focus {
+			background: #fafafa;
+			text-decoration: none;
+		}
+		& > a:hover .todolist-input i:before,
+		& > a:focus .todolist-input i:before {
+			content: '\f14a';
+			opacity: 0.4;
+			color: @black;
+		}
+		&.active > a .todolist-input i:before,
+		&.active > a:hover .todolist-input i:before,
+		&.active > a:focus .todolist-input i:before {
+			content: '\f14a';
+			color: @green;
+			opacity: 1.0;
+		}
+		&.active > a .todolist-title {
+			text-decoration: line-through;
+		}
+	}
+}
+
+.todolist-input,
+.todolist-title {
+    display: table-cell;
+    padding: 10px;
+}
+.todolist-title {
+    padding-right: 15px;
+}
+.todolist-input {
+    text-align: center;
+    font-size: 14px;
+    border-right: 1px solid #ddd;
+    padding-left: 15px;
+    
+	& i {
+		display: block;
+		width: 14px;
+		text-align: center;
+	}
+}

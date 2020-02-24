@@ -1,0 +1,90 @@
+﻿@model CouncelorNew.Models.ParentsAddView
+@{
+    ViewBag.Title = "AddParents";
+}
+
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    @*<ol class="breadcrumb pull-right">
+        <li class="breadcrumb-item dhiNormal"><a href="javascript:;">މީހުން</a></li>
+        <li class="breadcrumb-item dhiNormal"><a href="javascript:;">Add a new person</a></li>
+        <li class="breadcrumb-item dhiNormal active">މައިންބަފައިންގެ ތަފްސީލް</li>
+    </ol>*@
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header dhiDefault" style="text-align: right">މައިންބަފައިންގެ ތަފްސީލް</h1>
+    <!-- end page-header -->
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-lg-12 ui-sortable">
+            <!-- begin panel -->
+            <div class="panel panel-inverse" data-sortable-id="form-stuff-1">
+                <!-- begin panel-heading -->
+                <div class="panel-heading ui-sortable-handle">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title dhiNormal">ތަފްސީލް</h4>
+                </div>
+                <!-- end panel-heading -->
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row m-b-15">
+                                            <label class="col-form-label dhiDefault">ބައްޕަ</label>
+                                            <div class="col-md-9">
+                                                <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row m-b-15">
+                                            <label class="col-form-label dhiDefault">މަންމަ</label>
+                                            <div class="col-md-9">
+                                                <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="float-right">
+                                        <input type="submit" value="ސޭވް" class="btn btn-primary dhiDefault" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <!-- end panel-body -->
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-12 -->
+    </div>
+    <!-- end row -->
+
+</div>
+

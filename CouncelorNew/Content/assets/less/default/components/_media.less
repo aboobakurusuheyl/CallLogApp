@@ -1,0 +1,50 @@
+/* Component - Media Object */
+
+.media,
+.media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+.media + .media {
+    margin-top: 15px;
+}
+.media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.media-list {
+    padding-left: 0;
+    list-style: none;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media-body {
+    width: 10000px;
+}
+.media .media-object { width: 128px; }
+.media.media-lg .media-object { width: 256px; }
+.media.media-sm .media-object { width: 64px; }
+.media.media-xs .media-object { width: 32px; }
+.media > .pull-left,
+.media > .media-left {
+    padding-right: 15px;
+}
+.media > .pull-right,
+.media > .media-right {
+    padding-left: 15px;
+}
+.media a:not(.btn):hover,
+.media a:not(.btn):focus,
+.media a:not(.btn):hover .media-heading,
+.media a:not(.btn):focus .media-heading,
+.media a:not(.btn).media-heading:hover,
+.media a:not(.btn).media-heading:focus {
+    color: @black_darker;
+    text-decoration: none;
+}
+.media-list.media-list-with-divider > li + li {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}

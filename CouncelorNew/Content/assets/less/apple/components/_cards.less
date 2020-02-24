@@ -1,0 +1,231 @@
+/* Component - Bootstrap 4 - Cards */
+
+.card {
+	position: relative;
+	display: block;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	  -ms-flex-direction: column;
+		  flex-direction: column;
+	background-color: #fff;
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	
+	& > .list-group:first-child .list-group-item:first-child {
+		border-top-right-radius: 4px;
+		border-top-left-radius: 4px;
+	}
+	& > .list-group:last-child .list-group-item:last-child {
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+	&.card-inverse footer {
+		color: rgba(255,255,255,0.75);
+	}
+	&[class*="card-outline-"] {
+		border-width: 1px;
+		border-style: solid;
+	}
+}
+.card-accordion .card + .card {
+	margin-top: -10px;
+}	
+.card-block {
+	padding: 15px;
+}
+.card-title {
+	margin-bottom: 15px;
+}
+.card-subtitle {
+	margin-top: -5px;
+	margin-bottom: 0;
+}
+.card-text:last-child {
+	margin-bottom: 0;
+}
+.card-link:hover {
+	text-decoration: none;
+}
+.card-link + .card-link {
+  margin-left: 30px;
+}
+.card-header {
+	padding: 10px 15px;
+	margin-bottom: 0;
+	margin-top: 0;
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #f1f1f1;
+	font-weight: 600;
+}
+.card-header-link,
+a.card-header-link {
+	margin: -10px -15px;
+	padding: 10px 15px;
+	display: block;
+	text-decoration: none;
+}
+.card-header:first-child {
+	border-radius: 4px 4px 0 0;
+}
+.card-header.collapsed {
+	border-radius: 4px;
+}
+.card-footer {
+	padding: 10px 15px;
+	background-color: #f1f1f1;
+	border-top: 1px solid #f1f1f1;
+	font-weight: 600;
+	
+	&:last-child {
+		border-radius: 0 0 4px 4px;
+	}
+}
+.card-header-tabs {
+	margin-right: -5px;
+	margin-bottom: -5px;
+	margin-left: -5px;
+	border-bottom: 0;
+}
+.card-header-pills {
+	margin-right: -5px;
+	margin-left: -5px;
+	margin-bottom: 0px;
+}
+.card-primary {
+	background-color: @blue;
+	border-color: @blue;
+	
+	& .card-header,
+	& .card-footer {
+		background-color: transparent;
+	}
+}
+.card-success {
+	background-color: @green;
+	border-color: @green;
+	
+	& .card-header,
+	& .card-footer {
+		background-color: transparent;
+	}
+}
+.card-info {
+	background-color: @aqua;
+	border-color: @aqua;
+	
+	& .card-header,
+	& .card-footer {
+		background-color: transparent;
+	}
+}
+.card-warning {
+	background-color: @orange;
+	border-color: @orange;
+	
+	& .card-header,
+	& .card-footer {
+		background-color: transparent;
+	}
+}
+.card-danger {
+	background-color: @red;
+	border-color: @red;
+	
+	& .card-header,
+	& .card-footer {
+		background-color: transparent;
+	}
+}
+.card-outline-primary {
+	background-color: transparent;
+	border-color: #0275d8;
+}
+.card-outline-secondary {
+	background-color: transparent;
+	border-color: #ccc;
+}
+.card-outline-info {
+	background-color: transparent;
+	border-color: #5bc0de;
+}
+.card-outline-success {
+	background-color: transparent;
+	border-color: #5cb85c;
+}
+.card-outline-warning {
+	background-color: transparent;
+	border-color: #f0ad4e;
+}
+.card-outline-danger {
+	background-color: transparent;
+	border-color: #d9534f;
+}
+.card-inverse {
+	color: rgba(255, 255, 255, 0.65);
+	
+	& .card-header,
+	& .card-footer {
+		background-color: transparent;
+		border-color: rgba(255, 255, 255, 0.2);
+	}
+	& .card-header,
+	& .card-footer,
+	& .card-title,
+	& .card-blockquote {
+		color: #fff;
+	}
+	& .card-link,
+	& .card-text,
+	& .card-subtitle,
+	& .card-blockquote .blockquote-footer {
+		color: rgba(255, 255, 255, 0.65);
+	}
+	& .card-link:focus, .card-inverse .card-link:hover {
+		color: #fff;
+	}
+}
+.card-blockquote {
+	padding: 0;
+	margin-bottom: 0;
+	border-left: 0;
+}
+.card-img {
+	border-radius: 4px;
+	max-width: 100%;
+}
+.card-img-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+}
+.card-img-top {
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	max-width: 100%;
+}
+.card-img-bottom {
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	max-width: 100%;
+}
+.nav-tabs.card-header-tabs > li {
+	& > a {
+		border: none !important;
+		
+		&:hover,
+		&:focus {
+			background: none;
+		}
+	}
+	& > a.active,
+	&.active > a {
+		border-bottom-color: #fff !important;
+		background: #fff !important;
+		color: #000;
+	}
+}

@@ -1,0 +1,361 @@
+/* Component - Form Elements */
+
+.form-control {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    font-size: 12px;
+    line-height: 1.42857143;
+    height: 34px;
+    padding: 6px 12px;
+    
+		&:focus,
+		&.focus,
+		&.input-white:focus,
+		&.input-white.focus {
+				border-color: #5db0ff;
+				outline: 0;
+				box-shadow: 0 0 0 0.125rem rgba(52, 142, 227, 0.3);
+		}
+		&.input-lg,
+		&.form-control-lg {
+				font-size: 14px;
+		}
+		&.input-xs {
+				height: 20px;
+		}
+		&.input-inline {
+				display: inline;
+				width: auto;
+				padding: 0 7px;
+		}
+		&.input-white {
+				background: #fff;
+				border-color: #fff;
+		}
+		&.inverse-mode {
+				background: url(images/transparent/white-0.2.png);
+				background: rgba(255,255,255,0.2);
+				color: #fff;
+		}
+		&.inverse-mode {
+				border-color: transparent;
+		}
+		&.inverse-mode:focus {
+				border-color: transparent;
+				box-shadow: 0 0 0 0.125rem rgba(255,255,255, 0.5);
+		}
+}
+.form-control.form-control-with-bg,
+.form-control-with-bg .form-control {
+		background: #f1f1f1;
+}
+.form-control[disabled], 
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    background: @silver_darker;
+    opacity: 0.6;
+}
+.form-control[disabled]:focus, 
+.form-control[readonly]:focus,
+fieldset[disabled] .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+.checkbox.disabled label, 
+.radio.disabled label, 
+fieldset[disabled] .checkbox label, 
+fieldset[disabled] .radio label {
+    opacity: 0.6;
+}
+.form-control-plaintext {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    padding: 6px 0;
+    background-color: transparent;
+    border: solid transparent;
+    border-width: 1px 0;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: 34px;
+}
+select[multiple], 
+select[size],
+textarea.form-control {
+    height: auto;
+}
+.col-form-label,
+.row.form-group > .col-form-label {
+	padding-top: calc(.375rem + 1px);
+    padding-bottom: calc(.375rem + 1px);
+}
+.form-control-lg,
+.input-group-lg > .form-control, 
+.input-group-lg > .input-group-append > .btn, 
+.input-group-lg > .input-group-append > .input-group-text, 
+.input-group-lg > .input-group-prepend > .btn, 
+.input-group-lg > .input-group-prepend > .input-group-text,
+select.form-control-lg:not([size]):not([multiple]) {
+	height: 46px;
+    padding: 10px 16px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+.form-control-sm, 
+.input-group-sm > .form-control, 
+.input-group-sm > .input-group-append > .btn, 
+.input-group-sm > .input-group-append > .input-group-text, 
+.input-group-sm > .input-group-prepend > .btn, 
+.input-group-sm > .input-group-prepend > .input-group-text,
+select.form-control-sm:not([size]):not([multiple]) {
+	height: 30px;
+    padding: 5px 10px;
+    line-height: 1.5;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.input-group .form-control:last-child, 
+.input-group-addon:first-child,
+.input-group > .input-group-prepend > .btn, 
+.input-group > .input-group-prepend > .input-group-text,
+.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), 
+.input-group > .input-group-append:last-child > .input-group-text:not(:last-child), 
+.input-group > .input-group-append:not(:last-child) > .btn, 
+.input-group > .input-group-append:not(:last-child) > .input-group-text {
+	border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group-addon:last-child,
+.input-group > .input-group-append > .btn, 
+.input-group > .input-group-append > .input-group-text, 
+.input-group > .input-group-prepend:not(:first-child) > .btn, 
+.input-group > .input-group-prepend:not(:first-child) > .input-group-text,
+.input-group > .input-group-prepend:first-child > .btn:not(:first-child), 
+.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.input-group-lg > .form-control, 
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+	font-size: 14px;
+}
+.form-horizontal {
+		& .control-label,
+		& .col-form-label {
+				padding-top: 7px;
+				margin-bottom: 0;
+				text-align: left;
+		}
+		&.form-horizontal-text-right .control-label,
+		&.form-horizontal-text-right .col-form-label {
+				text-align: right;
+		}
+		& [class*="col-"] {
+			position: initial;
+		}
+		&.form-bordered .form-group {
+				border-bottom: 1px solid @silver_darker;
+				margin: 0;
+		}
+		&.form-bordered .form-group:last-child {
+				border-bottom: 0;
+		}
+		&.form-bordered .form-group > .control-label,
+		.form-bordered .form-group > .col-form-label {
+				padding: 22px 15px 15px;
+		}
+		&.form-bordered .form-group > div {
+				padding: 15px;
+		}
+		&.form-bordered .form-group > div {
+				border-left: 1px solid @silver_darker;
+		}
+		&.form-bordered .form-group > .control-label {
+				border-right: 1px solid @silver_darker;
+				margin-right: -1px;
+		}
+		&.form-bordered .has-feedback .form-control-feedback {
+				top: 15px;
+		}
+}
+.form-check {
+	padding-top: 7px;
+}
+.form-inline .form-check {
+	padding-top: 0;
+}
+.form-check-input {
+	margin-top: 2px;
+}
+.form-check-input:disabled~.form-check-label {
+    color: #7b7f83;
+}
+.valid-feedback,
+.invalid-feedback {
+	font-size: 90%;
+}
+.valid-tooltip,
+.invalid-tooltip {
+	font-size: 12px;
+}
+.valid-feedback,
+.has-success .col-form-label,
+.has-success .help-block, 
+.has-success .control-label, 
+.has-success .radio, 
+.has-success .checkbox, 
+.has-success .radio-inline, 
+.has-success .checkbox-inline,
+.has-success .form-control-feedback,
+.has-success.checkbox label, 
+.has-success.checkbox-inline label, 
+.has-success.radio label, 
+.has-success.radio-inline label,
+.form-check-input.is-valid~.form-check-label, 
+.was-validated .form-check-input:valid~.form-check-label {
+    color: @green_darker;
+}
+.valid-tooltip {
+	background: rgba(76, 217, 100, 0.8);
+}
+.has-success .form-control,
+.custom-select.is-valid, 
+.form-control.is-valid, 
+.was-validated .custom-select:valid, 
+.was-validated .form-control:valid {
+    border-color: @green;
+    box-shadow: none;
+}
+.has-success .form-control:focus,
+.custom-select.is-valid:focus, 
+.form-control.is-valid:focus, 
+.was-validated .custom-select:valid:focus, 
+.was-validated .form-control:valid:focus {
+    border-color: @green_darker;
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem rgba(76, 217, 100, 0.3);
+}
+.has-success .input-group-addon {
+    color: @green_darker;
+    background-color: #d8f5d9;
+    border-color: @green;
+}
+.has-warning.checkbox label, 
+.has-warning.checkbox-inline label, 
+.has-warning.radio label, 
+.has-warning.radio-inline label,
+.has-warning .col-form-label,
+.has-warning .help-block, 
+.has-warning .control-label, 
+.has-warning .radio, 
+.has-warning .checkbox, 
+.has-warning .radio-inline, 
+.has-warning .checkbox-inline,
+.has-warning .form-control-feedback {
+    color: #c47d15;
+}
+.has-warning .form-control {
+    border-color: @orange;
+    box-shadow: none;
+}
+.has-warning .form-control:focus {
+    border-color: @orange_darker;
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem rgba(255, 149, 0, 0.3);
+}
+.has-warning .input-group-addon {
+    background-color: #ffe4ca;
+    color: @orange_darker;
+}
+.has-error .help-block, 
+.has-error .control-label, 
+.has-error .radio, 
+.has-error .checkbox, 
+.has-error .radio-inline, 
+.has-error .checkbox-inline,
+.has-error .form-control-feedback,
+.has-error.checkbox label, 
+.has-error.checkbox-inline label, 
+.has-error.radio label, 
+.has-error.radio-inline label,
+.form-check-input.is-invalid~.form-check-label, 
+.was-validated .form-check-input:invalid~.form-check-label,
+.invalid-feedback {
+    color: @red_darker;
+}
+.has-error .form-control,
+.custom-select.is-invalid, 
+.form-control.is-invalid, 
+.was-validated .custom-select:invalid, 
+.was-validated .form-control:invalid {
+    border-color: @red;
+    box-shadow: none;
+}
+.has-error .form-control:focus,
+.custom-select.is-invalid:focus, 
+.form-control.is-invalid:focus, 
+.was-validated .custom-select:invalid:focus, 
+.was-validated .form-control:invalid:focus {
+    border-color: @red_darker;
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem rgba(255, 59, 48, 0.3);
+}
+.invalid-tooltip {
+	background: rgba(255, 59, 48, 0.8);
+}
+.has-error .input-group-addon {
+    background-color: #ffd0cd;
+    color: @red_darker;
+}
+.form-control-feedback {
+    line-height: 34px;
+}
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    text-align: center;
+    border-radius: 4px;
+}
+.input-group-addon:focus {
+    outline: none !important;
+}
+.input-group-addon .glyphicon {
+	position: relative;
+	top: 1px;
+}
+.input-group-addon,
+.input-group-text {
+    background-color: #ddd;
+    border: none;
+}
+.input-group-text {
+	padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+}
+.input-group-append .btn+.btn, 
+.input-group-append .btn+.input-group-text, 
+.input-group-append .input-group-text+.btn, 
+.input-group-append .input-group-text+.input-group-text,
+.input-group-prepend .btn+.btn, 
+.input-group-prepend .btn+.input-group-text, 
+.input-group-prepend .input-group-text+.btn, 
+.input-group-prepend .input-group-text+.input-group-text {
+	margin-left: 0;
+}
+legend {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e2e7eb;
+}
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #737373;
+}

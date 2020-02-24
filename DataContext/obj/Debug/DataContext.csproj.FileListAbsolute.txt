@@ -1,0 +1,14 @@
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\bin\Debug\DataContext.dll.config
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\bin\Debug\DataContext.dll
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\bin\Debug\DataContext.pdb
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\bin\Debug\EntityFramework.dll
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\bin\Debug\EntityFramework.xml
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\obj\Debug\DataContext.csproj.CopyComplete
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\obj\Debug\DataContext.dll
+C:\Users\Temp\Source\Repos\bobsuheyl\CouncilApp\DataContext\obj\Debug\DataContext.pdb
+C:\Users\Temp\source\repos\bobsuheyl\CouncilApp\DataContext\obj\Debug\DataContext.Migrations.initial.resources
+C:\Users\Temp\source\repos\bobsuheyl\CouncilApp\DataContext\obj\Debug\DataContext.csproj.GenerateResource.cache
+C:\Users\Temp\source\repos\bobsuheyl\CouncilApp\DataContext\obj\Debug\DataContext.Migrations.receiveddate.resources
+C:\Users\Temp\source\repos\bobsuheyl\CouncilApp\DataContext\obj\Debug\DataContext.Migrations.callinfo.resources

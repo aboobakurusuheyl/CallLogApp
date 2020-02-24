@@ -1,0 +1,109 @@
+/* Component - Pagination & pager */
+
+.pager {
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: center;
+    list-style: none;
+}
+.pager:before,
+.pager:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.pager li {
+    display: inline;
+}
+.pager li > a, 
+.pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    text-decoration: none;
+}
+.pager li > a, 
+.pager li > span,
+.pagination > li > a {
+    border-color: #dadfe2;
+    color: @black_darker;
+}
+.pager .previous > a, 
+.pager .previous > span {
+    float: left;
+}
+.pager .next > a, 
+.pager .next > span {
+    float: right;
+}
+.pager.pager-without-border li > a, 
+.pager.pager-without-border li > span,
+.pagination.pagination-without-border > li > a {
+    border-color: #fff;
+}
+.pager > .disabled > span,
+.pager > .disabled > a,
+.pager > .disabled > a:hover,
+.pager > .disabled > a:focus, 
+.pagination > .disabled > a, 
+.pagination > .disabled > a:hover, 
+.pagination > .disabled > a:focus,
+.pagination > .disabled > span, 
+.pagination > .disabled > span:hover, 
+.pagination > .disabled > span:focus {
+    opacity: 0.6;
+    border-color: #ddd;
+    background: #fff;
+    cursor: not-allowed;
+}
+.pagination > li > a {
+	display: inline-block;
+    color: @black_darker;
+    margin-left: 5px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    border-radius: 6px !important;
+}
+.pagination > li:first-child > a {
+    margin-left: 0;
+}
+.pagination-sm > li > a, 
+.pagination-sm > li > span,
+.pagination-sm .page-link {
+    font-size: 10px;
+    margin-left: 4px;
+    padding: 5px 10px;
+    line-height: 1.5;
+}
+.pagination-lg > li > a, 
+.pagination-lg > li > span,
+.pagination-lg .page-link {
+    font-size: 14px;
+    margin-left: 6px;
+    padding: 10px 16px;
+    line-height: 1.3333333;
+}
+.pager li > a:hover, 
+.pager li > a:focus, 
+.pager li > span:hover,
+.pager li > span:focus,
+.pagination > li > a:hover,
+.pagination > li > a:focus {
+    color: @black_darker;
+    background: #f2f3f4;
+    border-color: #dadfe2;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover, 
+.pagination > .active > span:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus {
+    background: #348ee3 !important;
+    border-color: #348ee3 !important;
+    color: #fff;
+}

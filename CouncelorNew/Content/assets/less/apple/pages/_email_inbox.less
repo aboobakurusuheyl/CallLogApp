@@ -1,0 +1,160 @@
+/* Pages - Email Inbox */
+
+.list-email {
+	margin: -1px 0;
+    border-top: 1px solid #e2e7eb;
+    border-bottom: 1px solid #e2e7eb;
+	
+	& > li.list-group-item {
+		border-radius: 0;
+		border: none;
+		margin-bottom: 0px;
+		padding: 15px 15px 15px 20px;
+		position: relative;
+		
+		.clearfix();
+		
+		& + li.list-group-item {
+			border-top: 1px solid #e2e7eb;
+		}
+	}
+	& .email-info,
+	& .email-sender,
+	& .email-info > a {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		position: relative;
+	}
+	& .email-info {
+		position: relative;
+		padding-right: 100px;
+	}
+	& .email-user {
+		float: left;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		overflow: hidden;
+		font-size: 18px;
+		line-height: 30px;
+		text-align: center;
+		color: #6e7179;
+		background: #f4f6f7;
+		margin: -5px 0;
+		
+		& img {
+			max-width: 100%;
+			display: block;
+		}
+		& + .email-info {
+			margin-left: 45px;
+		}
+	}
+	& .email-checkbox + .email-user + .email-info {
+		margin-left: 68px;
+	}
+	& .email-checkbox + .email-info {
+		margin-left: 23px;
+	}
+	& .email-title {
+		line-height: 20px;
+		
+		& + .email-desc {
+			padding-left: 20px;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				left: 6px;
+				top: 7px;
+				width: 6px;
+				height: 6px;
+				background: #ddd;
+				border-radius: 6px;
+			}
+		}
+	}
+	& .unread .email-title {
+		color: @blue;
+		font-weight: 600;
+	}
+	& .email-desc {
+		position: relative;
+		color: #5c656d;
+	}
+	& .email-sender {
+		width: 230px;
+		float: left;
+		padding-right: 15px;
+	}
+	& .unread .email-sender {
+		font-weight: 600;
+	}
+	& .email-title .label {
+		position: relative;
+		top: -1px;
+	}
+	& a {
+		color: @black;
+		text-decoration: none;
+	}
+	& .email-info,
+	& .email-info > a {
+		display: block;
+		margin-top: -15px;
+		margin-bottom: -15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	& .email-info > a {
+		margin-right: -115px;
+		padding-right: 100px;
+		position: relative;
+	}
+	& .email-time {
+		position: absolute;
+		width: 100px;
+		padding: 15px;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		font-size: 11px;
+		color: #9ba3ab;
+		text-align: right;
+	}
+	& .email-checkbox {
+		float: left;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		margin: -5px 5px -5px -12px;
+		
+		& label {
+			color: #e2e7eb;
+			display: block;
+			cursor: pointer;
+			
+			& input[type=checkbox] {
+				display: none;
+			}
+			& i {
+				font-size: 16px;
+				display: block;
+				line-height: 30px;
+				transition: all .2s linear;
+			}
+			&.active {
+				color: @black;
+				
+				& i:before {
+					content: '\f14a';
+				}
+			}
+		}
+	}
+	& > li.selected {
+		background: #e2e7ec;
+	}
+}

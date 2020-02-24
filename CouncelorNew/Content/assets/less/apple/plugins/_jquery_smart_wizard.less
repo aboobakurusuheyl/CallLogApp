@@ -1,0 +1,133 @@
+/* Plugin - jQuery Smart Wizard */
+
+.sw-main {
+	&.sw-theme-default {
+		box-shadow: none;
+	}
+	& .nav-tabs {
+		background: #f1f1f1;
+		border-radius: 0;
+		display: table;
+		width: 100%;
+		
+		& > li {
+			display: inline-block;
+			float: none;
+			padding: 0;
+			margin: 0;
+		}
+	}
+	& > ul.step-anchor.nav-tabs > li {
+		& > a {
+			display: block;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 20px;
+			padding: 15px 15px 15px;
+			margin: 0;
+			border-radius: 0;
+			color: @black;
+			
+			& .number {
+				float: left;
+				padding: 0;
+				height: 20px;
+				width: 20px;
+				font-size: 10px;
+				line-height: 20px;
+				text-align: center;
+				margin-right: 10px;
+				top: 0;
+				background: #bec1c3;
+				color: #fff;
+				border-radius: 40px;
+				position: relative;
+				
+				& + .info {
+					margin-left: 30px;
+					padding-right: 15px;
+					display: block;
+				}
+			}
+		}
+		&.active > a {
+			color: #fff !important;
+			background: @blue !important;
+			
+			& .number {
+				background: rgba(0,0,0,0.2);
+			}
+		}
+	}
+	.sw-theme-default > ul.step-anchor.nav-tabs > li > a small {
+		display: block;
+		font-size: 11px;
+		font-weight: 500;
+		line-height: 16px;
+		opacity: 0.75;
+	}
+	.sw-theme-default > ul.step-anchor > li > a::after {
+		display: none !important;
+	}
+	& .sw-container .step-content {
+		background: #fff;
+		padding: 30px;
+		border: none !important;
+	}
+	& .sw-toolbar {
+		background: #f1f1f1 !important;
+		padding: 15px !important;
+		display: block;
+		
+		.clearfix();
+		
+		& .btn {
+			border-radius: 4px !important;
+			min-width: 100px;
+		}
+		& .sw-btn-next,
+		& .sw-btn-next.disabled,
+		& .sw-btn-next.disabled:hover,
+		& .sw-btn-next.disabled:focus {
+			color: #fff;
+			background: @blue;
+			border-color: @blue;
+		}
+		& .sw-btn-next:hover,
+		& .sw-btn-next:focus {
+			background: @blue_darker;
+			border-color: @blue_darker;
+		}
+		& .sw-btn-prev,
+		& .sw-btn-prev.disabled,
+		& .sw-btn-prev.disabled:hover,
+		& .sw-btn-prev.disabled:focus {
+			background: #fff;
+		}
+		& .btn + .btn {
+			margin-left: 10px;
+			border-left: none;
+		}
+	}
+	& .sw-btn-group {
+		margin: 0;
+	}
+	&.sw-theme-default > ul.step-anchor > li.done > a {
+		background: #e9edef !important;
+		color: #5b6165 !important;
+	}
+	& > ul.step-anchor.nav-tabs > li.done > a .number,
+	& > ul.step-anchor.nav-tabs > li.done > a .number:before {
+		background: @blue !important;
+	}
+	& > ul.step-anchor.nav-tabs > li.done > a .number:before {
+		content: '\f00c';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 40px;
+		color: #fff;
+	}
+}

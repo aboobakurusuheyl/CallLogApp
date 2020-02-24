@@ -1,0 +1,140 @@
+/* Plugin - Bootstrap Date Timepicker */
+
+body .bootstrap-datetimepicker-widget .glyphicon {
+	font-size: 14px;
+}
+body .bootstrap-datetimepicker-widget .glyphicon.glyphicon-chevron-up:before { content: '\f106'; }
+body .bootstrap-datetimepicker-widget .glyphicon.glyphicon-chevron-down:before { content: '\f107'; }
+body .bootstrap-datetimepicker-widget .glyphicon.glyphicon-chevron-left:before { content: '\f104'; }
+body .bootstrap-datetimepicker-widget .glyphicon.glyphicon-chevron-right:before { content: '\f105'; }
+body .bootstrap-datetimepicker-widget .glyphicon.glyphicon-time:before { content: '\f017'; }
+body .bootstrap-datetimepicker-widget .glyphicon.glyphicon-calendar:before { content: '\f133'; }
+body .bootstrap-datetimepicker-widget .timepicker-hour, 
+body .bootstrap-datetimepicker-widget .timepicker-minute, 
+body .bootstrap-datetimepicker-widget .timepicker-second {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    line-height: 22px;
+    height: auto;
+    padding: 6px 15px;
+}
+body .bootstrap-datetimepicker-widget table td.today:before {
+	border-bottom-color: @black;
+}
+body .bootstrap-datetimepicker-widget .picker-switcher {
+	width: 100% !important;
+}
+body .bootstrap-datetimepicker-widget .datepicker > div {
+	display: block;	
+}
+body .bootstrap-datetimepicker-widget.dropdown-menu {
+    width: 320px;
+    padding: 0;
+    border-radius: 6px;
+}
+body .bootstrap-datetimepicker-widget.dropdown-menu,
+body .bootstrap-datetimepicker-widget a[data-action] {
+    color: @black;
+}
+body .bootstrap-datetimepicker-widget.dropdown-menu .datepicker {
+	padding: 0;
+}
+body .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid white;
+    top: -7px;
+    left: 15px;
+}
+body .bootstrap-datetimepicker-widget.dropdown-menu.bottom.pull-right:after {
+	left: auto;
+	right: 15px;
+}
+body .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
+	display: none;
+}
+body .bootstrap-datetimepicker-widget .collapse.in {
+	display: block;
+}
+body .bootstrap-datetimepicker-widget .collapse.in + .picker-switch td span {
+	margin-top: 0;
+	border-radius: 0 0 6px 6px;
+}
+body .bootstrap-datetimepicker-widget .picker-switch td span {
+	display: block;
+	width: auto;
+	margin: -1px 0 0;
+	background: rgba(255,255,255,0.15);
+	height: 36px;
+	line-height: 36px;
+	border-radius: 6px 6px 0 0;
+}
+body .bootstrap-datetimepicker-widget .picker-switch td a {
+	text-decoration: none;
+}
+body .bootstrap-datetimepicker-widget .picker-switch td span:hover {
+	background: #eee;
+}
+body .bootstrap-datetimepicker-widget table thead tr:first-child th:hover,
+body .bootstrap-datetimepicker-widget table td span:hover,
+body .bootstrap-datetimepicker-widget table td.day:hover, 
+body .bootstrap-datetimepicker-widget table td.hour:hover, 
+body .bootstrap-datetimepicker-widget table td.minute:hover, 
+body .bootstrap-datetimepicker-widget table td.second:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+body .bootstrap-datetimepicker-widget .datepicker-days,
+body .bootstrap-datetimepicker-widget .datepicker-months,
+body .bootstrap-datetimepicker-widget .timepicker .timepicker-picker,
+body .bootstrap-datetimepicker-widget .timepicker .timepicker-hours,
+body .bootstrap-datetimepicker-widget .timepicker .timepicker-minutes,
+body .bootstrap-datetimepicker-widget .timepicker .datepicker-seconds,
+body .bootstrap-datetimepicker-widget .datepicker-years,
+body .bootstrap-datetimepicker-widget .datepicker-decades,
+body .bootstrap-datetimepicker-widget .table-condensed > thead > tr > th,
+body .bootstrap-datetimepicker-widget .table-condensed > tbody > tr > td {
+	padding: 5px;
+}
+body .bootstrap-datetimepicker-widget .datepicker-months table tbody tr td,
+body .bootstrap-datetimepicker-widget .datepicker-years table tbody tr td,
+body .bootstrap-datetimepicker-widget .picker-switch .table-condensed > tbody > tr > td {
+	padding: 0;
+}
+body .bootstrap-datetimepicker-widget .datepicker-decades .decade {
+	line-height: 16px !important;
+	padding: 11px;
+}
+body .bootstrap-datetimepicker-widget button[data-action] {
+	padding: 6px 15px;
+}
+body .bootstrap-datetimepicker-widget table td {
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+}
+body .bootstrap-datetimepicker-widget .timepicker-picker table td.separator {
+	width: 20px;
+}
+body .bootstrap-datetimepicker-widget .timepicker-picker table td,
+body .bootstrap-datetimepicker-widget .timepicker-picker table td .btn span {
+    width: auto;
+    height: auto;
+    line-height: inherit;
+}
+body .bootstrap-datetimepicker-widget .timepicker-picker table td {
+	padding: 0 5px;
+}
+body .bootstrap-datetimepicker-widget .timepicker-picker table td .btn,
+body .bootstrap-datetimepicker-widget .timepicker-picker table td .btn span {
+	display: block;
+}
+body .bootstrap-datetimepicker-widget .timepicker-picker table td .btn.btn-primary {
+	width: 60px;
+	margin-right: 10px;
+}
+body .bootstrap-datetimepicker-widget .timepicker-picker table td:first-child {
+	padding-left: 10px;
+}

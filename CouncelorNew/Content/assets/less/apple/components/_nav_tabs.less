@@ -1,0 +1,68 @@
+/* Component - Nav Tabs */
+
+.nav-tabs-inverse > .nav-tabs,
+.nav-tabs.nav-tabs-inverse {
+    background: @black_darker;
+}
+.nav-tabs {
+    background: #d5d7d8;
+    border-radius: 5px 5px 0 0;
+    
+	& .nav-link {
+		padding: 10px 15px;
+	}
+	& > li > a {
+		margin-right: 5px;
+		line-height: 20px;
+	}
+	&.nav-justified > li > a {
+		border-radius: 3px 3px 0 0;
+	}
+	&,
+	& > li > a,
+	& > li.active > a, 
+	& > li.active > a:hover, 
+	& > li.active > a:focus,
+	&.nav-justified > li > a,
+	&.nav-justified > .active > a, 
+	&.nav-justified > .active > a:hover, 
+	&.nav-justified > .active > a:focus {
+		border: none !important;
+	}
+	& .nav-link:hover,
+	& .nav-link:focus,
+	& .nav-link.active,
+	& > li.active > a, 
+	& > li.active > a:hover, 
+	& > li.active > a:focus,
+	& .nav-item.show .nav-link,
+	&.nav-justified > .active > a, 
+	&.nav-justified > .active > a:hover, 
+	&.nav-justified > .active > a:focus {
+		color: @black;
+	}
+	&.nav-tabs-inverse {
+		&.nav-tabs > li.active > a,
+		&.nav-tabs > li.active > a:hover,
+		&.nav-tabs > li.active > a:focus,
+		&.nav-tabs .nav-link.active,
+		&.nav-tabs .nav-link.active:hover,
+		&.nav-tabs .nav-link.active:focus,
+		&.nav-tabs .nav-item.show .nav-link {
+			color: @black;
+			background: #fff;
+		}
+		&.nav-tabs > li > a:hover,
+		&.nav-tabs > li > a:focus,
+		&.nav-tabs .nav-link:hover,
+		&.nav-tabs .nav-link:focus {
+			color: #fff;
+			background: none;
+		}
+	}
+	& .nav-item,
+	& > li,
+	&.nav-justified > li {
+		margin-bottom: 0;
+	}
+}

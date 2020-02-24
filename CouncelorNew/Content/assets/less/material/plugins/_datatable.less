@@ -1,0 +1,227 @@
+/* Plugin - Data Table */
+	
+.dataTables_wrapper.form-inline {
+	display: block;
+}
+.dataTables_length .form-control {
+	margin: 0 5px;
+}
+div.dataTables_wrapper div.dataTables_filter label {
+	display: inline;
+}
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, 
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    background: @silver_darker !important;
+    border-radius: 2px !important;
+    border: none !important;
+    top: 10px !important;
+    left: 10px !important;
+    line-height: 16px !important;
+    box-shadow: none !important;
+    color: @black !important;
+    font-weight: bold !important;
+    height: 16px !important;
+    width: 16px !important;
+    text-align: center !important;
+    text-indent: 0 !important;
+    font-size: 14px !important;
+}
+.dataTables_wrapper table.dataTable > tbody > tr.child ul li {
+	border-color: @grey_lighter;
+}
+table.dataTable > tbody > tr.child td.child {
+	padding-left: 15px !important;
+}
+.table.dataTable.table-bordered.collapsed {
+	border-right: none !important;
+}
+.table.dataTable.table-bordered.collapsed > tbody > tr.child td.child {
+	border-right: 1px solid #e2e7ec !important;
+}
+table.dataTable > tbody > tr.child ul {
+	display: block !important;
+}
+table.dataTable > tbody > tr.child span.dtr-title {
+	font-weight: 600 !important;
+	color: @black_darker;
+}
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, 
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+    background: #b6c2c9;
+}
+body div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 5px 0;
+}
+body div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+	display: inline-block;
+}
+body div.dataTables_wrapper div.dataTables_paginate ul.pagination > li {
+	display: inline;
+}
+body .dataTables_wrapper table.dataTable {
+    margin: 10px 0 !important;
+    border-collapse: collapse !important;
+}
+body table.table-bordered.dataTable {
+    border-collapse: collapse !important;
+}
+.dt-buttons.btn-group {
+    float: left;
+}
+.dataTables_length,
+div.dataTables_info {
+    float: left;
+    margin-right: 15px;
+}
+.dataTables_empty {
+    text-align: center;
+}
+table.DTFC_Cloned tr.even {
+    background: none !important;
+}
+div.dataTables_scrollHead .table,
+.DTFC_LeftWrapper div.DTFC_LeftHeadWrapper table,
+.DTFC_RightWrapper div.DTFC_RightHeadWrapper table {
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+.DTFC_LeftBodyLiner .table thead > tr > th,
+.dataTables_scrollBody .table thead > tr > th {
+    border-bottom: none !important;
+}
+.dataTables_scrollBody,
+.DTFC_LeftBodyLiner {
+    border-bottom: 2px solid #ebeced;
+}
+.dataTables_scroll + .dataTables_info,
+.dataTables_wrapper .DTFC_LeftBodyLiner table.dataTable,
+.dataTables_wrapper .dataTables_scrollBody table.dataTable {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+.dataTables_wrapper .DTFC_LeftWrapper table.dataTable > tbody > tr > td,
+.dataTables_wrapper .dataTables_scrollBody table.dataTable > tbody > tr > td  {
+    border-bottom: none !important;
+}
+.table > tbody + thead > tr > th,
+.table.fixedHeader-floating thead > tr > th {
+    border-top: none;
+    border-bottom-width: 1px !important;
+}
+table.dataTable tbody > tr.selected, 
+table.dataTable tbody > tr.selected td,
+table.dataTable tbody > tr > .selected {
+    background: #ffc !important;
+    color: #707478;
+}
+table.dataTable th.focus, 
+table.dataTable td.focus {
+    position: relative;
+    z-index: 1000;
+    outline: 2px solid @black_darker !important;
+}
+.table.table-bordered.dataTable tbody tr:first-child td {
+	border-top: none !important;
+}
+div.dt-autofill-handle {
+	background: #2196F3 !important;
+	border-color: #2196F3 !important;
+}
+div.dt-autofill-select {
+	background: #2196F3 !important;
+}
+div.dt-autofill-background {
+	z-index: 1080 !important;
+}
+div.dt-autofill-list {
+	z-index: 1090 !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+}
+div.dt-autofill-list ul li {
+	display: table !important;
+	width: 100% !important;
+}
+div.dt-autofill-list ul > li:first-child {
+	border-radius: 6px 6px 0 0 !important;
+}
+div.dt-autofill-list ul > li:last-child {
+	border-radius: 0 0 6px 6px !important;
+}
+div.dt-autofill-list div.dt-autofill-question {
+	padding: 15px !important;
+	border-color: #f5f5f5 !important;
+}
+div.dt-autofill-list div.dt-autofill-button {
+	width: 140px !important;
+	padding: 15px !important;
+	border-color: #f5f5f5 !important;
+}
+div.dt-autofill-list .dt-autofill-button .btn {
+	display: block;
+	width: 100%;
+	position: relative;
+	color: transparent;
+	background: @grey;
+	border-color: @grey;
+}
+div.dt-autofill-list .dt-autofill-button .btn:hover,
+div.dt-autofill-list .dt-autofill-button .btn:focus {
+	background: @grey_darker;
+    border-color: @grey_darker;
+}
+div.dt-autofill-list .dt-autofill-button .btn:before {
+	content: 'Fill This';
+	color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+div.dt-button-info {
+	border: none !important;
+	box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 6px !important;
+    padding: 20px !important;
+}
+div.dt-button-info h2 {
+	border: none !important;
+	background: none !important;
+	padding: 0 !important;
+}
+div.dt-button-info > div {
+	padding: 0 !important;
+	margin-top: 10px !important;
+}
+div.DTCR_pointer {
+	width: 2px !important;
+	background: #2196F3 !important;
+	margin-left: -1px;
+}
+table.dataTable.fixedHeader-floating {
+	z-index: 1030;
+}
+tr.dt-rowReorder-moving {
+    outline: 2px solid #2e353c !important;
+}
+table.dt-rowReorder-float {
+    outline: 2px solid #2196F3 !important;
+}
+table.dt-rowReorder-float tr td {
+    background: #fff !important;
+}
+table.dataTable thead .sorting_asc:after {
+	content: '\f0dd' !important;
+}
+table.dataTable thead .sorting_desc:after {
+	content: '\f0de' !important;
+}
+table.dataTable thead .sorting:after {
+    content: '\f0dc' !important;
+}
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_asc:before {
+	display: none !important;
+}

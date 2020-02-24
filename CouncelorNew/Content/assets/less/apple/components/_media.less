@@ -1,0 +1,53 @@
+/* Component - Media Object */
+
+.media,
+.media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media-body {
+    width: 10000px;
+}
+.media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.media-list {
+    padding-left: 0;
+    list-style: none;
+    
+	&.media-list-with-divider > li + li {
+		border-top: 1px solid @silver_darker;
+		padding-top: 20px;
+	}
+}
+.media {
+	.media + .media {
+		margin-top: 15px;
+	}
+	& .media-object { width: 128px; }
+	&.media-lg &-object { width: 256px; }
+	&.media-sm &-object { width: 64px; }
+	&.media-xs &-object { width: 32px; }
+	& > .pull-left,
+	& > .media-left {
+		padding-right: 15px;
+	}
+	& > .pull-right,
+	& > .media-right {
+		padding-left: 15px;
+	}
+	& a:not(.btn):hover,
+	& a:not(.btn):focus,
+	& a:not(.btn):hover &-heading,
+	& a:not(.btn):focus &-heading,
+	& a:not(.btn)&-heading:hover,
+	& a:not(.btn)&-heading:focus {
+		color: @black;
+		text-decoration: none;
+	}
+}

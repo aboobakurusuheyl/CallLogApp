@@ -1,0 +1,43 @@
+/* Plugin - Colorpicker */
+
+.colorpicker {
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 5px;
+    z-index: 1010 !important;
+}
+.colorpicker:before {
+	display: none !important;
+}
+.colorpicker:after {
+	border-width: 7px !important;
+	top: -7px !important;
+}
+.colorpicker-left:after {
+	left: 12px!important;
+}
+.colorpicker-right:after {
+	right: 12px!important;
+}
+.colorpicker-hue, 
+.colorpicker-alpha {
+    margin-bottom: 5px !important;
+    margin-left: 5px !important;
+}
+.input-group.colorpicker-component {
+	display: table;
+	width: 100%;
+}
+.input-group.colorpicker-component .form-control {
+	display: table-cell;
+	width: 100%;
+}
+.input-group.colorpicker-component .input-group-addon {
+	display: table-cell;
+	vertical-align: middle;
+	width: 20px;
+}
+.colorpicker-element .add-on i, 
+.colorpicker-element .input-group-addon i {
+	display: block !important;
+}

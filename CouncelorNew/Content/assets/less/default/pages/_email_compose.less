@@ -1,0 +1,102 @@
+/* Pages - Email Compose */
+
+.inbox .nav-title {
+	font-size: 10px;
+	color: @grey_darker;
+	padding: 15px 13px 7px;
+}
+.inbox .nav-inbox {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+.inbox .nav-inbox > li {
+	display: block;
+}
+.inbox .nav-inbox > li > a {
+	display: block;
+	text-decoration: none;
+	border-radius: 0;
+	padding: 8px 20px;
+	color: @black;
+	font-weight: 600;
+}
+.inbox .nav-inbox > li > a i {
+	width: 18px;
+}
+.inbox .nav-inbox > li + li {
+	margin-top: 0;
+}
+.inbox .nav-inbox > li.active > a,
+.inbox .nav-inbox > li.active > a:hover,
+.inbox .nav-inbox > li.active > a:focus {
+	background: #d9dfe3;
+	color: @black;
+}
+.inbox .nav-inbox > li > a .badge,
+.inbox .nav-inbox > li.active > a .badge {
+	background: @black;
+	color: #fff;
+	padding: 4px 8px;
+	margin-top: -1px;
+	font-size: 10px;
+	line-height: 11px;
+}
+.inbox .float-right-link {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-top: 13px;
+}
+.inbox .email-to {
+	position: relative;
+}
+.inbox .email-to .tagit,
+.inbox .email-to .form-control {
+	border: none !important;
+	border-bottom: 1px solid #ccd0d4 !important;
+	padding: 9px 12px 9px 45px !important;
+	border-radius: 0;
+}
+.inbox .tagit input[type="text"] {
+	font-weight: 500;
+}
+.inbox .email-subject .form-control {
+	border: none !important;
+	border-bottom: 1px solid #ccd0d4 !important;
+	padding: 9px 12px 9px 12px !important;
+	border-radius: 0;
+}
+.inbox .email-subject .form-control:focus {
+	box-shadow: none;
+}
+.inbox .email-to .control-label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	padding-top: 13px;
+	padding-left: 10px;
+	line-height: 16px;
+	width: 45px;
+}
+.inbox .email-content {
+	padding: 0;
+	margin: 0;
+}
+.inbox .email-content .wysihtml5-toolbar {
+	padding: 10px 0 0;
+}
+.inbox .email-content .wysihtml5-toolbar .btn {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+.inbox .email-content .wysihtml5-toolbar > li {
+	margin: 0 5px 5px 0;
+}
+.inbox .email-content .wysihtml5-sandbox {
+	border-radius: 0 !important;
+	padding: 15px !important;
+	border: 1px solid #ccd0d4 !important;
+}

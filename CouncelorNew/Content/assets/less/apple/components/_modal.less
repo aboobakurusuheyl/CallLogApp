@@ -1,0 +1,45 @@
+/* Component - Modal Setting */
+
+.modal-content {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+.modal-header {
+    padding: 12px 15px;
+    border-bottom-color: #e2e7eb;
+    
+	& .close {
+		margin: -12px -15px -12px 0;
+		padding: 12px 15px;
+		line-height: 27px;
+	}
+}
+.modal-body {
+    padding: 15px;
+}
+.modal-footer {
+    border-top-color: #e2e7eb;
+    padding: 14px 15px 15px;
+}
+.modal-message {
+	& .modal-dialog {
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	& .modal-content {
+		border-radius: 0;
+	}
+	& .modal-body,
+	& .modal-header,
+	& .modal-footer {
+		width: 60%;
+		border: none;
+		margin: 0 auto;
+	}
+}
+.modal-backdrop.fade.in {
+    opacity: 0.5;
+}

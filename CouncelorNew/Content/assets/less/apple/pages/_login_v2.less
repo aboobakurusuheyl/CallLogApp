@@ -1,0 +1,121 @@
+/* Pages - Login V2 */
+
+.login.login-v2 {
+    color: #ccc;
+    width: 400px;
+    margin: 168px 0 0 -200px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 4px;
+
+	& a {
+		color: #fff;
+	}
+	& label {
+		color: #ccc;
+	}
+	& .login-content {
+		padding: 20px;
+		width: 400px;
+	}
+	& .login-header {
+		width: 400px;
+		padding: 0 20px;
+		margin: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		position: relative;
+		
+		&,
+		& .brand,
+		& .brand small {
+			color: #fff;
+		}
+		& .brand small {
+			color: rgba(255,255,255,0.5);
+		}
+		& .icon {
+			opacity: 0.4;
+			right: 20px;
+			top: 2px;
+		}
+		& .icon i {
+			font-size: 56px;
+		}
+	}
+	& .form-control {
+		background: rgba(0,0,0,0.5);
+		border: 1px solid transparent;
+		color: #fff;
+		
+		&:focus {
+			border-color: transparent;
+			box-shadow: 0 0 0 0.125rem rgba(255,255,255, 0.3);
+		}
+	}
+}
+.login-cover,
+.login-cover-bg,
+.login-cover-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background .2s linear;
+}
+.login-cover-image img {
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.login-cover-bg {
+	background: rgba(0,0,0,0.5);
+}
+.login-bg-list {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1020;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 20px;
+    
+	& > li {
+		width: 66px;
+		height: 66px;
+		overflow: hidden;
+		float: left;
+		transition: all .2s linear;
+		border: 3px solid transparent;
+		border-radius: 66px;
+		
+		&:hover,
+		&:focus {
+			border-color: rgba(255,255,255,0.5);
+		}
+		& a {
+			display: block;
+			height: 60px;
+			height: 60px;
+			overflow: hidden;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		&.active {
+			border-color: #fff;
+			z-index: 1020;
+			position: relative;
+		}
+		& img {
+			max-height: 100%;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+﻿
+@font-face {
+    font-family: "__Samee Avas Thaana_5";
+    font-style: normal;
+    font-weight: 400;
+    src: local("☺"), url("../fonts/sameeavasthaana.woff") format("woff"), url("~/fonts/sameeavasthaana.svg") format("svg");
+}
+
+@font-face {
+    font-family: "__Faruma";
+    font-style: normal;
+    src: local("☺"), url("../fonts/Faruma.woff") format("woff"), url("../fonts/Faruma.woff") format("svg");
+}
+
+@font-face {
+    font-family: "mv_waheed";
+    src: url(../fonts/MV_Waheed.otf);
+    src: local('â˜º'),url(../fonts/MV_Waheed.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: 'mv-faseyha';
+    src: local('â˜º'),url("../fonts/MV_Faseyha.otf") format("opentype");
+}
+
+.thaana-faseyha {
+    font-family: 'mv-faseyha', 'MV Faseyha', 'Faruma';
+    line-height: 1.8em;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    direction: rtl;
+    letter-spacing: 1px;
+}
+
+.dhiTitleLarge {
+    font-family: __Faruma, Mv Sun,Mv Eamaan XP,Thaana Unicode Akeh !important;
+    font-size: 24px;
+    color: peru;
+    direction: rtl;
+    font-weight: 300
+}
+
+.dhiSubTitleLarge {
+    font-family: __Faruma, Mv Sun,Mv Eamaan XP,Thaana Unicode Akeh !important;
+    font-size: 20px;
+    color: black;
+}
+
+.dhiDefault {
+    font-family: __Faruma, Mv Sun,Mv Eamaan XP,Thaana Unicode Akeh !important;
+    font-size: 16px;
+    color: black;
+    direction: rtl;
+}
+
+.dhiNormal {
+    font-family: __Faruma, Mv Sun,Mv Eamaan XP,Thaana Unicode Akeh !important;
+    font-size: 12px;
+    color: black;
+    direction: rtl;
+}
+

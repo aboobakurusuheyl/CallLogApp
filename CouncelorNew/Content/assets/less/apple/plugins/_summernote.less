@@ -1,0 +1,36 @@
+/* Plugin - Summernote */
+
+.note-editor.note-frame {
+    border: none !important;
+    margin: 0 !important;
+    background: none;
+    
+	& .note-placeholder,
+	& .note-editing-area .note-editable {
+		padding: 15px !important;
+	}
+}
+.note-toolbar {
+	&.panel-heading .btn-group .btn {
+		margin-top: 0 !important;
+	}
+	& .dropdown-toggle:after {
+		display: none !important;
+	}
+}
+.note-popover.popover {
+	display: none;
+}
+.note-popover .popover-content, 
+.panel-heading.note-toolbar {
+    padding: 10px 15px !important;
+    border-radius: 0;
+    background: @black;
+}
+.note-popover .popover-content .btn, 
+.panel-heading.note-toolbar .btn {
+	border-color: transparent;
+}
+.note-btn-group .dropdown-menu .btn-group {
+	display: inline-block;
+}

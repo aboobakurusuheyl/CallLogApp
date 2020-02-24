@@ -1,0 +1,130 @@
+/* Widget - Stats */
+
+.widget {
+    color: #fff;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.widget.widget-stats {
+    position: relative;
+}
+.widget-stats .stats-info h4 {
+    font-size: 13px;
+    margin: 5px 0;
+    color: #fff;
+    color: rgba(255,255,255,0.7);
+}
+.widget-stats .stats-icon {
+    font-size: 42px;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    line-height: 56px;
+    margin-left: 15px;
+    color: @black_darker;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    opacity: 0.15;
+}
+.widget-stats .stats-content {
+	position: relative;
+}
+.widget-stats .stats-info p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.widget-stats .stats-link a {
+    display: block;
+    margin: 15px -15px -15px;
+    padding: 7px 15px;
+    background: rgba(0,0,0,0.4);
+    text-align: right;
+    color: #fff;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+.widget-stats .stats-link a:hover, 
+.widget-stats .stats-link a:focus {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+.widget-stats .stats-icon.stats-icon-lg {
+    font-size: 128px;
+    top: 15px;
+    right: 0px;
+    color: #fff;
+    width: 128px;
+    height: 50px;
+    line-height: 50px;
+    text-shadow: 3px 7px rgba(0,0,0,0.25);
+}
+.widget-stats .stats-icon.stats-icon-lg i {
+	position: relative;
+}
+.widget-stats .stats-icon.stats-icon-square {
+    opacity: 1;
+    border-radius: 12px;
+    font-size: 42px;
+    top: 15px;
+    right: 15px;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    line-height: 56px;
+    margin-left: 15px;
+}
+.widget-stats .stats-title {
+    position: relative;
+    margin: 0 0 2px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.widget-stats .stats-title,
+.widget-stats .stats-desc {
+    color: #fff;
+    color: rgba(255,255,255,0.7);
+}
+.widget-stats .stats-desc {
+    margin: -5px 0 -3px;
+    font-weight: 400;
+}
+.widget-stats .stats-number {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+.widget-stats .stats-progress {
+    background: rgba(0,0,0,0.5);
+    height: 2px;
+    margin: 0 0 15px;
+    border-radius: 3px;
+}
+.widget-stats .stats-progress.stats-progress-light {
+    background: rgba(255,255,255,0.3);
+}
+.widget-stats .stats-progress .progress-bar {
+    background: #fff;
+    border-radius: 0 3px 3px 0;
+}
+.widget-stats.text-inverse .stats-desc, 
+.widget-stats.text-inverse .stats-title {
+    color: rgba(0,0,0,.85);
+}
+.widget-stats.text-inverse .stats-number,
+.widget-stats.text-inverse .stats-desc {
+	letter-spacing: 0;
+	font-weight: 400;
+}
+.widget-stats.text-inverse .stats-title {
+	font-weight: 700;
+}
+.widget-stats.bg-white .stats-progress {
+	background: rgba(0,0,0,.1);
+}
+.widget-stats.bg-white .stats-progress .progress-bar {
+	background: @black;
+}

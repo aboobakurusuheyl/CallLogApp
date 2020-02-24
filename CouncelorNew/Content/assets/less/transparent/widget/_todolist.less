@@ -1,0 +1,55 @@
+/* Widget - Todolist */
+
+.todolist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.todolist > li {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.todolist > li > a {
+    display: block;
+    color: #fff;
+}
+.todolist > li > a:hover,
+.todolist > li > a:focus {
+    background: rgba(255,255,255,0.15);
+    text-decoration: none;
+}
+.todolist > li > a:hover .todolist-input i:before,
+.todolist > li > a:focus .todolist-input i:before {
+    content: '\f14a';
+    opacity: 0.4;
+    color: #fff;
+}
+.todolist > li.active > a .todolist-input i:before,
+.todolist > li.active > a:hover .todolist-input i:before,
+.todolist > li.active > a:focus .todolist-input i:before {
+    content: '\f14a';
+    color: @green;
+    opacity: 1.0;
+}
+.todolist > li.active > a .todolist-title {
+    text-decoration: line-through;
+}
+.todolist-title {
+    padding-right: 15px;
+}
+.todolist-input {
+    text-align: center;
+    font-size: 14px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    padding-left: 15px;
+    color: rgba(255,255,255,0.25);
+}
+.todolist-input i {
+    display: block;
+    width: 14px;
+    text-align: center;
+}
+.todolist-input,
+.todolist-title {
+    display: table-cell;
+    padding: 10px;
+}

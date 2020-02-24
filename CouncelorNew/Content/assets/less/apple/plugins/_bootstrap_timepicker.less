@@ -1,0 +1,50 @@
+/* Plugin - Bootstrap Timepicker */
+
+.bootstrap-timepicker.input-group {
+	display: table;
+	width: 100%;
+	
+	& > .form-control {
+		display: table-cell;
+		width: 100%;
+	}
+	& .input-group-addon {
+		display: table-cell;
+		width: 20px;
+	}
+}
+.bootstrap-timepicker-widget.dropdown-menu {
+	padding: 5px !important;
+	
+	&.open {
+		border: none !important;
+		max-width: 240px;
+	}
+	&:before {
+		display: none !important;
+	}
+}
+.bootstrap-timepicker .bootstrap-timepicker-widget.dropdown-menu + .form-control {
+    border-radius: 4px 0 0 4px;
+}
+.bootstrap-timepicker-widget {
+	& .form-control {
+		width: 45px;
+	}
+	& table td {
+		padding: 5px !important;
+	}
+	& table td a {
+		padding: 5px 0 !important;
+		margin: -5px 0 !important;
+	}
+	& table td a:hover,
+	& table td a:focus {
+		background: @blue !important;
+		border: none !important;
+		color: #fff;
+	}
+	& table td input {
+		border-radius: 4px !important;
+	}
+}

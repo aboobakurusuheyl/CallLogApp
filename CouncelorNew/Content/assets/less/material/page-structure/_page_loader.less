@@ -1,0 +1,111 @@
+/* Page Loader */
+
+#page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #E6E8EC;
+    z-index: 9999;
+    
+	&.fade {
+		display: none;
+		
+		&.in,
+		&.show {
+			display: block;
+		}
+	}
+}
+@-webkit-keyframes rotation {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(359deg);}
+}
+@keyframes rotation {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(359deg);}
+}
+.spinner, 
+.spinner-small {
+    height: 40px;
+    width: 40px;
+    margin: 0px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-top: 2px solid #fff;
+    border-radius: 100%;
+}
+.fade.in .spinner, 
+.fade.in .spinner-small,
+.fade.show .spinner, 
+.fade.show .spinner-small {
+    -webkit-animation: rotation .6s infinite linear;
+    animation: rotation .6s infinite linear;
+}
+.spinner-small {
+    border: 2px solid rgba(0,0,0,0.05);
+    border-top: 2px solid #24B498;
+    height: 30px;
+    width: 30px;
+    margin: -15px 0 0 -15px;
+}
+.material-loader {
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -100px;
+    
+	& .message {
+		line-height: 100px;
+		text-align: center;
+	}
+	& .circular {
+		animation: rotate 2s linear infinite;
+		height: 36px;
+		width: 36px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -24px;
+		margin-top: -55px;
+	}
+	& .path {
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+		animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+		stroke-linecap: round;
+	}
+}
+.ie8 .material-loader .message {
+    padding-left: none;
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes dash{
+    0%{
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35;
+    }
+    100%{
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124;
+    }
+}
+@keyframes color{
+    100%, 0%{
+        stroke: @black;
+    }
+}

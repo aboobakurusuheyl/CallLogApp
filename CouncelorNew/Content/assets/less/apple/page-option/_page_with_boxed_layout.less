@@ -1,0 +1,43 @@
+/* Option - Boxed Layout */
+
+.boxed-layout {
+    background-image: url(images/cover-pattern.png);
+    
+    & .top-menu,
+	& .pace {
+		width: 1080px;
+		left: 50%;
+		margin-left: -540px;
+	}
+	& .page-container {
+		width: 1080px;
+		margin: 0 auto;
+		box-shadow: 0 0px 30px rgba(0,0,0,0.5);
+		min-height: 100%;
+		background: #e4e7e8;
+		overflow: hidden;
+		position: relative;
+		
+		& #header,
+		& .sidebar,
+		& .sidebar-bg {
+			left: auto;
+		}
+		& #header {
+			width: 1080px;
+			right: auto;
+		}
+	}
+	& .pace .pace-progress,
+	& .pace .pace-activity,
+	& .page-with-top-menu .top-menu {
+		position: absolute;
+	}
+	& .page-sidebar-minified .sidebar,
+	& .page-with-top-menu.page-sidebar-minified .sidebar {
+		position: relative;
+		float: left;
+		padding-top: 0;
+	}
+}
+

@@ -1,0 +1,74 @@
+/* Plugin - X-Editable */
+
+.editable-date {
+	width: 300px;
+	
+	& .datetimepicker {
+		width: auto !important;
+		color: @black !important;
+	}
+}
+.editable-input {
+	font-size: 12px;
+	
+	& .date .form-control,
+	& .datetimepicker.datetimepicker-inline {
+		width: 240px;
+	}
+	& .input-sm,
+	& select.form-control:not([size]):not([multiple]).input-sm {
+		height: 30px;
+	}
+	& .date .add-on {
+		display: none;
+	}
+	& .datetimepicker.datetimepicker-inline table > thead > tr > th, 
+	& .datetimepicker.datetimepicker-inline table thead th,
+	& .datetimepicker.datetimepicker-inline table tfoot th,
+	& .datetimepicker.datetimepicker-inline table tbody td {
+		border: none !important;
+		vertical-align: middle;
+	}
+	& .tt-dropdown-menu {
+		border: none !important;
+		font-size: 12px;
+		box-shadow: 0 10px 30px 0px rgba(0,0,0,.2) !important;
+	}
+	& .tt-suggestion.tt-is-under-cursor {
+		background: @blue !important;
+	}
+	& .twitter-typeahead .tt-hint {
+		padding: 5px 9px !important;
+	}
+	& .select2-container .select2-choice > .select2-chosen {
+		color: @black;
+	}
+}
+.editable-checklist {
+	font-size: 12px;
+	min-width: 200px;
+	
+	& label {
+		display: block;
+	
+		& input[type="checkbox"].form-control {
+			box-shadow: none !important;
+			height: 20px !important;
+		}
+		& input[type="checkbox"] + span {
+			margin-left: 5px;
+		}
+	}
+}
+.editable-error-block {
+	font-size: 12px;
+}
+.editableform textarea.form-control {
+	min-width: 240px;
+}
+.editable-buttons .glyphicon-ok:before {
+	content: '\f00c';
+}
+.editable-buttons .glyphicon-remove:before {
+	content: '\f00d';
+}

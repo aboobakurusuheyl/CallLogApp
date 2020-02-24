@@ -1,0 +1,77 @@
+/* Component - Note Setting */
+
+.note {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 3px solid;
+    position: relative;
+	border-radius: 4px;
+	
+	& h1,
+	& h2,
+	& h3,
+	& h4,
+	& h5,
+	& h6 {
+		color: inherit;
+	}
+	& .note-icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 80px;
+		font-size: 56px;
+		line-height: 56px;
+		text-align: center;
+		
+		& > i {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50%;
+			margin-top: -28px;
+		}
+		& + .note-content {
+			margin-left: 85px;
+		}
+	}
+	&.note-with-right-icon {
+		border-left: none;
+		border-right: 3px solid;
+		
+		& .note-icon {
+			left: auto;
+			right: 0;
+		}
+		& .note-content {
+			margin-left: 0;
+			margin-right: 85px;
+		}
+	}
+	&.note-danger { border-color: @red; background: #ffcecb; color: #801e18; }
+	&.note-danger .note-icon { background: @red; }
+	&.note-warning { border-color: @orange; background: #ffe4bf; color: #804b00; }
+	&.note-warning .note-icon { background: @orange; }
+	&.note-yellow { border-color: #ffd900; background: #fff2bf; color: #806d00; }
+	&.note-yellow .note-icon { background: #ffd900; }
+	&.note-lime { border-color: #90ca4b; background: #ddefc9; color: #486626; }
+	&.note-lime .note-icon { background: #90ca4b; }
+	&.note-success { border-color: @green; background: #d2f5d8; color: #266d32; }
+	&.note-success .note-icon { background: @green; }
+	&.note-primary { border-color: @blue; background: #bfdeff; color: #003d80; }
+	&.note-primary .note-icon { background: @blue; }
+	&.note-info { border-color: @aqua; background: #d6f1fe; color: #2d647d; }
+	&.note-info .note-icon { background: @aqua; }
+	&.note-purple { border-color: #5856D6; background: #d5d5f5; color: #2c2b6b; }
+	&.note-purple .note-icon { background: #5856D6; }
+	&.note-dark, &.note-inverse { border-color: @black; background: #c8c8c8; color: @black_darker; }
+	&.note-dark .note-icon, &.note-inverse .note-icon { background: @black; }
+	&.note-secondary, &.note-default { border-color: #bbb; background: #e2e2e3; color: #454548; }
+	&.note-secondary .note-icon, &.note-default .note-icon { background: #bbb; }
+	&.note-light { border-color: #fff; background: #fff; color: #666; }
+	&.note-light .note-icon { background: #fff; }
+}
+.panel > .note {
+	border-radius: 0;
+}

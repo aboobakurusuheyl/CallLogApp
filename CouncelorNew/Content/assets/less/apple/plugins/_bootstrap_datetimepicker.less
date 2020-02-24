@@ -1,0 +1,143 @@
+/* Plugin - Bootstrap Date Timepicker */
+
+body .bootstrap-datetimepicker-widget {
+	& .glyphicon {
+		font-size: 14px;
+	}
+	& .glyphicon.glyphicon-chevron-up:before { content: '\f106'; }
+	& .glyphicon.glyphicon-chevron-down:before { content: '\f107'; }
+	& .glyphicon.glyphicon-chevron-left:before { content: '\f104'; }
+	& .glyphicon.glyphicon-chevron-right:before { content: '\f105'; }
+	& .glyphicon.glyphicon-time:before { content: '\f017'; }
+	& .glyphicon.glyphicon-calendar:before { content: '\f133'; }
+	& .timepicker-hour, 
+	& .timepicker-minute, 
+	& .timepicker-second {
+		border: 1px solid #d3d8df;
+		border-radius: 6px;
+		display: block;
+		width: 80px;
+		margin: 0 auto;
+		line-height: 22px;
+		height: auto;
+		padding: 6px 15px;
+	}
+	& .picker-switcher {
+		width: 100% !important;
+	}
+	& .datepicker > div {
+		display: block;	
+	}
+	&.dropdown-menu {
+		width: 320px;
+		padding: 0;
+		border-radius: 6px;
+		
+		& .datepicker {
+			padding: 0;
+		}
+		&.bottom:after {
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid white;
+			top: -7px;
+			left: 15px;
+		}
+		&.bottom:before {
+			display: none;
+		}
+		&.bottom.pull-right:after {
+			left: auto;
+			right: 15px;
+		}
+	}
+	&.dropdown-menu,
+	& a[data-action] {
+		color: @black;
+	}
+	& .collapse.in {
+		display: block;
+		
+		& + .picker-switch td span {
+			margin-top: 0;
+			border-radius: 0 0 6px 6px;
+		}
+	}
+	& .picker-switch td span {
+		display: block;
+		width: auto;
+		margin: -1px 0 0;
+		background: #f1f1f1;
+		height: 36px;
+		line-height: 36px;
+		border-radius: 6px 6px 0 0;
+		
+		&:hover {
+			background: #e9ecef;
+		}
+	}
+	& .picker-switch td a {
+		text-decoration: none;
+	}
+	& table thead tr:first-child th:hover,
+	& table td span:hover,
+	& table td.day:hover, 
+	& table td.hour:hover, 
+	& table td.minute:hover, 
+	& table td.second:hover {
+		background: #f1f1f1;
+	}
+	& .datepicker-days,
+	& .datepicker-months,
+	& .timepicker .timepicker-picker,
+	& .timepicker .timepicker-hours,
+	& .timepicker .timepicker-minutes,
+	& .timepicker .datepicker-seconds,
+	& .datepicker-years,
+	& .datepicker-decades,
+	& .table-condensed > thead > tr > th,
+	& .table-condensed > tbody > tr > td {
+		padding: 5px;
+	}
+	& .datepicker-months table tbody tr td,
+	& .datepicker-years table tbody tr td,
+	& .picker-switch .table-condensed > tbody > tr > td {
+		padding: 0;
+	}
+	& .datepicker-decades .decade {
+		line-height: 16px !important;
+		padding: 11px;
+	}
+	& button[data-action] {
+		padding: 6px 15px;
+	}
+	& table td {
+		height: 32px;
+		width: 32px;
+		line-height: 32px;
+	}
+	& .timepicker-picker table td.separator {
+		width: 20px;
+	}
+	& .timepicker-picker table td,
+	& .timepicker-picker table td .btn span {
+		width: auto;
+		height: auto;
+		line-height: inherit;
+	}
+	& .timepicker-picker table td {
+		padding: 0 5px;
+		
+		& .btn,
+		& .btn span {
+			display: block;
+		}
+		& .btn.btn-primary {
+			width: 60px;
+			margin-right: 10px;
+		}
+		&:first-child {
+			padding-left: 10px;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+/* Plugin - Combobox */
+
+.combobox-container {
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+}
+.combobox-container .input-group {
+	display: table;
+	width: 100%;
+}
+.combobox-container .input-group .input-group-addon {
+	display: table-cell;
+	width: 35px;
+}
+.combobox-container .caret {
+	margin: 0;
+}
+.combobox-container .glyphicon-remove:before {
+	content: '\f00d';
+}
+.combobox-container .dropdown-toggle:after {
+	display: none;
+}
+.combobox-container input, 
+.combobox-container .uneditable-input {
+    border: 1px solid #edf0f5;
+    background: #edf0f5;
+    font-size: 13px;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    color: #555;
+    border-radius: 4px 0 0 4px !important;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.combobox-container input:focus, 
+.combobox-container .uneditable-input:focus {
+    outline: 0;
+    border-color: #5db0ff !important;
+    box-shadow: 0 0 0 0.125rem rgba(52, 142, 227, 0.3) !important;
+}
+.combobox-container input,
+.combobox-container .add-on {
+    display: table-cell !important;
+}
+.combobox-container .add-on {
+    width: 1% !important;
+    padding: 5px 10px !important;
+    white-space: nowrap;
+    float: none !important;
+    background: #d6d8dd !important;
+    color: #555 !important;
+}
+.btn .combobox-clear {
+    margin: 0 !important;
+    width: 8px !important;
+    position: relative;
+    opacity: 1.0;
+}
+.combobox-container .icon-remove:before {
+    content: '\f00d';
+    font-size: 14px;
+    font-style: normal;
+    position: absolute;
+    right: -2px;
+    top: 1px;
+    text-shadow: none;
+}
+.combobox-container input,
+.combobox-container .uneditable-input {
+    border: 1px solid #ccd0d4 !important;
+    background: #fff !important;
+}

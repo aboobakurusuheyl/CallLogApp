@@ -1,0 +1,140 @@
+/* Widget - Stats */
+
+.widget {
+    color: #fff;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    
+	&.widget-stats {
+		position: relative;
+	}
+}
+.widget-stats {
+	& .stats-info h4 {
+		font-size: 12px;
+		margin: 5px 0;
+		color: #fff;
+		color: rgba(255,255,255,0.7);
+	}
+	& .stats-icon {
+		font-size: 42px;
+		height: 56px;
+		width: 56px;
+		text-align: center;
+		line-height: 56px;
+		margin-left: 15px;
+		color: #000;
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		opacity: 0.15;
+		
+		&.stats-icon-lg {
+			font-size: 128px;
+			top: 15px;
+			right: 0px;
+			color: #fff;
+			width: 128px;
+			height: 50px;
+			line-height: 50px;
+			text-shadow: 3px 7px rgba(0,0,0,0.25);
+		
+			& i {
+				position: relative;
+			}
+		}
+		&.stats-icon-square {
+			opacity: 1;
+			border-radius: 12px;
+			font-size: 42px;
+			top: 15px;
+			right: 15px;
+			height: 56px;
+			width: 56px;
+			text-align: center;
+			line-height: 56px;
+			margin-left: 15px;
+		}
+	}
+	& .stats-content {
+		position: relative;
+	}
+	& .stats-info p {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	& .stats-link a {
+		display: block;
+		margin: 15px -15px -15px;
+		padding: 7px 15px;
+		background: rgba(0,0,0,0.4);
+		text-align: right;
+		color: #fff;
+		color: rgba(255,255,255,0.7);
+		text-decoration: none;
+		
+		&:hover, 
+		&:focus {
+			background: rgba(0,0,0,0.6);
+			color: #fff;
+		}
+	}
+	& .stats-title {
+		position: relative;
+		margin: 0 0 2px;
+		font-size: 12px;
+	}
+	& .stats-title,
+	& .stats-desc {
+		color: #fff;
+		color: rgba(255,255,255,0.7);
+	}
+	& .stats-desc {
+		margin: -5px 0 -3px;
+		font-weight: 300;
+	}
+	& .stats-number {
+		font-size: 24px;
+		margin-bottom: 15px;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+	& .stats-progress {
+		background: rgba(0,0,0,0.5);
+		height: 2px;
+		margin: 0 0 15px;
+		border-radius: 3px;
+		
+		&.stats-progress-light {
+			background: rgba(255,255,255,0.3);
+		}
+		& .progress-bar {
+			background: #fff;
+			border-radius: 0 3px 3px 0;
+		}
+	}
+	&.text-inverse {
+		& .stats-desc, 
+		& .stats-title {
+			color: rgba(0,0,0,.85);
+		}
+		& .stats-number,
+		& .stats-desc {
+			letter-spacing: 0;
+			font-weight: 400;
+		}
+		& .stats-title {
+			font-weight: 700;
+		}
+	}
+	&.bg-white .stats-progress {
+		background: rgba(0,0,0,.1);
+		
+		& .progress-bar {
+			background: @black_lighter;
+		}
+	}
+}

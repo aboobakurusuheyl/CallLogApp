@@ -1,0 +1,220 @@
+/* Component - Button */
+.btn {
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 6px 12px;
+    transition: all .1s ease-in-out;
+    outline: none !important;
+    box-shadow: 0 0 2px rgba(0,0,0,.2), 0 4px 4px -2px rgba(0,0,0,.2);
+    border-radius: 2px;
+}
+.btn-group {
+	border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0,0,0,.2), 0 4px 4px -2px rgba(0,0,0,.2);
+}
+.btn-group .btn, .btn-link {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,.2), 0 6px 6px rgba(0,0,0,.23);
+}
+.btn:focus, 
+.btn:active:focus,
+.btn:active,
+.btn:hover:active,
+.btn.active,
+.btn.active:active {
+    outline: none;
+    box-shadow: 0 0 2px rgba(0,0,0,.2), 0 4px 4px -2px rgba(0,0,0,.2);
+}
+.btn-group .btn:hover {
+	box-shadow: none !important;
+}
+.btn-block {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.btn.btn-sm {
+	font-size: 13px;
+	line-height: 16px;
+	padding: 5px 10px;
+}
+.btn.btn-xs {
+	font-size: 13px;
+	line-height: 18px;
+	padding: 1px 5px;
+}
+.btn[class*="btn-gradient-"] {
+    transition: background .1s linear;
+}
+.btn.btn-lg,
+.input-group-lg > .input-group-append > .btn,
+.input-group-lg > .input-group-prepend > .btn {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 10px 16px;
+}
+.btn-icon,
+.btn.btn-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+}
+.btn-circle,
+.btn.btn-circle {
+    border-radius: 100px;
+}
+.btn-icon.btn-xs {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+    line-height: 16px;
+}
+.btn-icon.btn-sm {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    line-height: 22px;
+}
+.btn.btn-icon.btn-lg {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+    line-height: 34px;
+}
+.btn-scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1020;
+    font-size: 23px!important;
+    width: 40px!important;
+    height: 40px!important;
+    line-height: 40px!important;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+.btn-scroll-to-top i {
+	line-height: 40px;
+}
+.page-with-right-sidebar .btn-scroll-to-top {
+    left: 25px;
+    right: auto;
+}
+.btn > .pull-left, 
+.btn > .pull-right {
+    line-height: 1.428571429;
+}
+.input-group-prepend .btn {
+	border-right: 1px solid;
+}
+.input-group-append .btn {
+	border-left: 1px solid;
+}
+
+
+/* Component - Button - Default */
+.generate-button-styling(btn-default; #fff; @black; #eee);
+
+
+
+
+/* Component - Button - Inverse */
+.generate-button-styling(btn-inverse; @black; #fff; #424242);
+
+
+/* Component - Button - Primary */
+.generate-button-styling(btn-primary; #2196F3; #fff; #42A5F5);
+
+
+/* Component - Button - Success */
+.generate-button-styling(btn-success; #009688; #fff; #26A69A);
+
+
+/* Component - Button - Warning */
+.generate-button-styling(btn-warning; @orange; #fff; #FFA726);
+
+
+/* Component - Button - Danger */
+.generate-button-styling(btn-danger; @red; #fff; #EF5350);
+
+
+/* Component - Button - Info */
+.generate-button-styling(btn-info; #00BCD4; #fff; #26C6DA);
+
+
+/* Component - Button - Purple */
+.generate-button-styling(btn-purple; @purple; #fff; #AB47BC);
+
+
+/* Component - Button - Yellow */
+.generate-button-styling(btn-yellow; @yellow; @black_darker; #FFEE58);
+
+
+/* Component - Button - Grey */
+.generate-button-styling(btn-grey; @grey; #fff; @silver_darker);
+
+
+/* Component - Button - Lime */
+.generate-button-styling(btn-lime; #8BC34A; #fff; #9CCC65);
+
+
+/* Component - Button - White */
+
+.btn.btn-white,
+.btn.btn-white.disabled,
+.btn.btn-white.disabled:hover,
+.btn.btn-white.disabled:focus,
+.btn.btn-white[disabled],
+.btn.btn-white[disabled]:hover,
+.btn.btn-white[disabled]:focus {
+    color: @black;
+    background: #fff;
+    border-color: #fff;
+}
+.btn.btn-white.btn-white-without-border {
+    border-color: #fff;
+}
+.btn.btn-white.btn-white-without-border.active,
+.btn.btn-white.btn-white-without-border.active:hover,
+.btn.btn-white.btn-white-without-border.active:focus {
+    border-color: #eee;
+}
+.btn.btn-white.btn-white-without-border:hover,
+.btn.btn-white.btn-white-without-border:focus {
+    border-color: #eee;
+}
+.btn-white:hover, 
+.btn-white:focus, 
+.btn-white:active, 
+.btn-white.active,
+.btn-white.active.focus, 
+.btn-white.active:focus, 
+.btn-white.active:hover, 
+.btn-white:active.focus, 
+.btn-white:active:focus, 
+.btn-white:active:hover,
+.show > .btn-white.dropdown-toggle,
+.open > .dropdown-toggle.btn-white,
+.open > .dropdown-toggle.btn-white:hover,
+.open > .dropdown-toggle.btn-white:focus,
+.btn-white:not(:disabled):not(.disabled).active, 
+.btn-white:not(:disabled):not(.disabled):active {
+    background: #eee;
+    border-color: #eee;
+}
+.input-group-append .btn.btn-white,
+.btn-group .btn.btn-white:not(.active) + .btn.btn-white,
+.input-group-btn .btn.btn-white:not(.active) + .btn.btn-white {
+    border-left-color: #eee;
+}
+.input-group-prepend .btn.btn-white {
+    border-right-color: #eee;
+}

@@ -1,0 +1,71 @@
+/* Widget - Unlimited Nav Tabs */
+
+.tab-overflow {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px 2px 0 0;
+}
+.tab-overflow .nav.nav-tabs {
+    white-space: nowrap;
+    overflow: hidden;
+    display: table;
+    margin: 0;
+    border-radius: 2px 2px 0 0;
+    background: none;
+}
+.tab-overflow .nav.nav-tabs > li,
+.tab-overflow.nav.nav-tabs > li {
+    display: table-cell;
+    float: none;
+}
+.tab-overflow .nav.nav-tabs > li > a {
+    margin-left: -1px;
+}
+.tab-overflow .next-button,
+.tab-overflow .prev-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    display: none !important;
+    opacity: 0;
+    transition: all .2s linear;
+}
+.tab-overflow .prev-button {
+    left: 0;
+    right: auto;
+}
+.tab-overflow .next-button a,
+.tab-overflow .prev-button a {
+    margin: 0;
+    background: #c1ccd1;
+}
+.tab-overflow .prev-button > a {
+    border-radius: 3px 3px 0 0;
+}
+.tab-overflow .next-button > a,
+.tab-overflow .next-button > a:hover,
+.tab-overflow .next-button > a:focus,
+.tab-overflow .prev-button > a,
+.tab-overflow .prev-button > a:hover,
+.tab-overflow .prev-button > a:focus {
+    background: rgba(99, 99, 99, 0.85);
+}
+.nav.nav-tabs > li > a.active,
+.nav.nav-tabs > li.active > a,
+.nav.nav-tabs > li.active > a:hover,
+.nav.nav-tabs > li.active > a:focus,
+.nav.nav-tabs > li > a.active:hover,
+.nav.nav-tabs > li > a.active:focus {
+    background: rgba(99, 99, 99, 0.85);
+    color: #fff;
+}
+.tab-overflow.overflow-right .next-button,
+.tab-overflow.overflow-left .prev-button {
+    display: block !important;
+    opacity: 1;
+    background: none;
+}
+.tab-overflow .nav-tabs > li.prev-button + li.active > a {
+    border-radius: 0 3px 0 0;
+}

@@ -1,0 +1,72 @@
+/* Plugin - Superbox */
+
+.superbox {
+    font-size: 0;
+    margin: -1px -1px 0 0;
+}
+.superbox-list {
+    display: inline-block;
+    position: relative;
+}
+.superbox-list.superbox-O {
+	z-index: 10;
+}
+.superbox-list.superbox-O:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    border: 10px solid transparent;
+    border-bottom-color: #d9e0e7;
+    margin-left: -10px;
+    z-index: 10;
+}
+.superbox-list.superbox-O:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    border: 10px solid transparent;
+    border-bottom-color: #242a31;
+    margin-left: -10px;
+    z-index: 20;
+}
+.superbox-show {
+    background: @black_darker;
+    border-top: 1px solid #d9e0e7 !important;
+}
+.superbox-img {
+    width: 100%;
+    cursor: pointer;
+	display: block;
+	padding-top: 75%;
+	position: relative;
+}
+.superbox-img:hover {
+    opacity: 0.8;
+}
+.superbox-img img {
+	display: none;
+}
+.superbox-img span {
+	position: absolute;
+	top: 1px;
+	left: 0;
+	right: 1px;
+	bottom: 0;
+	background-size: cover !important;
+	background-position: center !important;
+}
+.superbox-current-img {
+    box-shadow: 0 5px 35px rgba(0,0,0,.65);
+    max-width: 100%;
+}
+.superbox-close {
+    opacity: 0.7;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+}

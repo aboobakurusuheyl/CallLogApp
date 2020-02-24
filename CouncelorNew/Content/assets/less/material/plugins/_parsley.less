@@ -1,0 +1,40 @@
+/* Plugin - Parsley */
+
+.parsley-error {
+    background: #fff !important;
+    border-color: @red !important;
+}
+.parsley-error:focus {
+    border-color: #cc4946 !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem rgba(244, 67, 54, 0.3) !important;
+}
+.parsley-success {
+    background: #fff !important;
+    border-color: #009688 !important;
+}
+.parsley-success:focus {
+	border-color: #009688 !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem rgba(0, 150, 136, 0.3) !important;
+}
+.parsley-error,
+.parsley-success {
+    color: @black !important;
+    box-shadow: none !important;
+}
+.parsley-error:focus,
+.parsley-success:focus {
+    color: @black !important;
+}
+.parsley-errors-list {
+    padding: 0 !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    color: @red;
+    font-size: 12px !important;
+    line-height: inherit !important;
+}
+.parsley-errors-list.filled {
+    margin-top: 5px !important;
+}

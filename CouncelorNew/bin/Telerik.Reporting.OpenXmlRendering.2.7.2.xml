@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Reporting.OpenXmlRendering.2.7.2</name>
+    </assembly>
+    <members>
+        <member name="M:Telerik.Reporting.OpenXmlRendering.Presentation.ConvertHelper.ConvertRotation(System.Double)">
+            <summary>
+            This simple type represents an angle in 60,000ths of a degree. Positive angles are clockwise (i.e., towards the
+            9 positive y axis); negative angles are counter-clockwise (i.e., towards the negative y axis).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Reporting.OpenXmlRendering.Presentation.TemplatePresentation">
+            <summary>
+            Implementation of presentation template generation.
+            The inheritors will receive all necessary functionality
+            to generate empty presentation
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.OpenXmlRendering.Presentation.TemplatePresentation.RelId">
+            <summary>
+            Table contains all types of relationships in document
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.OpenXmlRendering.Presentation.HtmlTextBoxContext.PreviousLineBottom">
+            <summary>
+            The bottom of the previous line in mm. 0f if first line
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.OpenXmlRendering.Presentation.HtmlTextBoxContext.ShouldApplyVerticalAlignAsTopPadding">
+            <summary>
+            Determines if Vertical HtmlTextBox align to be applied as TopPadding
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.OpenXmlRendering.Presentation.TableModel.EnsureCellSpan(System.Int32,System.Int32,DocumentFormat.OpenXml.Int32Value,DocumentFormat.OpenXml.Int32Value)">
+            <summary>
+            Office 2007 needs table cell span attributes to validate merged cells
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.OpenXmlRendering.Presentation.WritingContext.TableModels">
+            <summary>
+            Support nested tables
+            </summary>
+        </member>
+    </members>
+</doc>

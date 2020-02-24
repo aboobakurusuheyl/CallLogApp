@@ -1,0 +1,76 @@
+﻿@model CouncelorNew.Models.DashboardViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Dashboard</small></h1>
+    <!-- end page-header -->
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-3 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="widget widget-stats bg-gradient-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-users fa-fw"></i></div>
+                <div class="stats-content" >
+                    <div class="stats-title">Total Calls</div>
+                    <div class="stats-number">@Model.Total</div>
+                    @*<div class="stats-progress progress">
+                        <div class="progress-bar" style="width: 70.1%;"></div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="widget widget-stats bg-gradient-cyan">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-home fa-fw"></i></div>
+                <div class="stats-content">
+                    <div class="stats-title">Calls Today</div>
+                    <div class="stats-number">@Model.Today</div>
+                    @*<div class="stats-progress progress">
+                        <div class="progress-bar" style="width: 40.5%;"></div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="widget widget-stats bg-gradient-purple">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-female fa-fw"></i></div>
+                <div class="stats-content">
+                    <div class="stats-title">Resolved</div>
+                    <div class="stats-number">@Model.Resolved</div>
+                    @*<div class="stats-progress progress">
+                        <div class="progress-bar" style="width: 76.3%;"></div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="widget widget-stats bg-gradient-blue">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-male fa-fw"></i></div>
+                <div class="stats-content">
+                    <div class="stats-title">Pending</div>
+                    <div class="stats-number">@Model.Pending</div>
+                    @*<div class="stats-progress progress">
+                        <div class="progress-bar" style="width: 54.9%;"></div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+    </div>
+    <!-- end row -->
+</div>

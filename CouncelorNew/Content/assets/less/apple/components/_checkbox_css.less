@@ -1,0 +1,102 @@
+/* Component - CSS Checkbox */
+
+.checkbox.checkbox-css {
+	position: relative;
+	line-height: 16px;
+	padding-top: 7px;
+	
+	&.checkbox-inline {
+		padding-left: 0;
+		display: inline-block;
+		
+		& + .checkbox.checkbox-css.checkbox-inline {
+			margin-left: 15px;
+		}
+	}
+	& label {
+		padding-left: 24px;
+		margin: 0;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 7px;
+			width: 16px;
+			height: 16px;
+			border-radius: 4px;
+			background: #dee2e6;
+		}
+	}
+	
+	& input {
+		display: none;
+		
+		&:checked + label:after {
+			content: '';
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 50% 50%;
+			position: absolute;
+			top: 7px;
+			left: 0;
+			color: #fff;
+			height: 16px;
+			width: 16px;
+			text-align: center;
+		}
+		&:checked + label:before {
+			background: @blue;
+			border-color: @blue;
+		}
+	}
+	&.checkbox-success input:checked + label:before {
+		background: @green;
+		border-color: @green;
+	}
+	&.checkbox-info input:checked + label:before {
+		background: @aqua;
+		border-color: @aqua;
+	}
+	&.checkbox-danger input:checked + label:before {
+		background: @red;
+		border-color: @red;
+	}
+	&.checkbox-warning input:checked + label:before {
+		background: @orange;
+		border-color: @orange;
+	}
+	&.checkbox-inverse input:checked + label:before {
+		background: @black;
+		border-color: @black;
+	}
+}
+.has-success .checkbox.checkbox-css label:before,
+.has-success.checkbox.checkbox-css label:before,
+.is-valid .checkbox.checkbox-css label:before,
+.is-valid.checkbox.checkbox-css label:before {
+	background: #d8f5d9;
+}
+.has-success .checkbox.checkbox-css label,
+.has-success.checkbox.checkbox-css label,
+.is-valid .checkbox.checkbox-css label,
+.is-valid.checkbox.checkbox-css label {
+	color: @green_darker;
+}
+.has-error .checkbox.checkbox-css label:before,
+.has-error.checkbox.checkbox-css label:before,
+.is-invalid .checkbox.checkbox-css label:before,
+.is-invalid.checkbox.checkbox-css label:before {
+	background: #ffd0cd;
+}
+.has-error .checkbox.checkbox-css label,
+.has-error.checkbox.checkbox-css label,
+.is-invalid .checkbox.checkbox-css label,
+.is-invalid.checkbox.checkbox-css label {
+	color: @red_darker;
+}
+.has-warning .checkbox.checkbox-css label:before,
+.has-warning.checkbox.checkbox-css label:before {
+	background: #fce1ba;
+}

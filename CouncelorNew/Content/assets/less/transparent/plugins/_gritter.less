@@ -1,0 +1,92 @@
+/* Plugin - Gritter Notification */
+
+#gritter-notice-wrapper {
+	width: 371px!important;
+	z-index: 1040 !important;
+}
+.gritter-item-wrapper {
+    background: none !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+}
+.gritter-top,
+.gritter-item,
+.gritter-bottom {
+    background: url(images/transparent/black-0.8.png) !important;
+    background: rgba(0,0,0,0.8) !important;
+}
+.gritter-with-image {
+	width: 280px!important;
+}
+.gritter-with-image, .gritter-without-image {
+	padding-right: 70px!important;
+}
+.gritter-image {
+    margin: 2px 10px 0 0 !important;
+    border-radius: 4px;
+}
+.gritter-title {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    padding-bottom: 0px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    text-shadow: none !important;
+}
+.gritter-light .gritter-title {
+    color: #333 !important;
+    font-weight: 600 !important;
+}
+.gritter-item {
+	font-family: inherit !important;
+	color: #aaa !important;
+	font-size: 10px !important;
+	padding: 2px 15px 5px !important;
+}
+.gritter-close:hover:before,
+.gritter-close:focus:before {
+	color: #fff;
+}
+.gritter-light .gritter-item, 
+.gritter-light .gritter-bottom, 
+.gritter-light .gritter-top {
+    background: url(images/transparent/white-0.98.png) !important;
+    background: rgba(255,255,255,0.98) !important;
+    color: @grey !important;
+}
+.gritter-light .gritter-close {
+	border-left: 1px solid #ccd0d4;
+}
+.gritter-light .gritter-close:hover:before,
+.gritter-light .gritter-close:focus:before {
+	color: #2d353c;
+}
+.gritter-close, 
+.gritter-light .gritter-close {
+	left: auto!important;
+	right: 0!important;
+	top: 0!important;
+	background: 0 0!important;
+	width: 70px!important;
+	height: auto!important;
+	display: block!important;
+	bottom: 0;
+	border-left: 1px solid #444;
+}
+.gritter-close:before, 
+.gritter-light .gritter-close:before {
+	content: 'Close'!important;
+	position: absolute!important;
+	text-align: center!important;
+	right: 0!important;
+	color: @grey;
+	left: 0;
+	z-index: 10;
+	text-indent: 0;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 9px;
+	top: 50%!important;
+	margin-top: -5px;
+	font-family: inherit;
+}

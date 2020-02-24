@@ -1,0 +1,113 @@
+/* Pages - Search Results */
+
+.result-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.result-list:before,
+.result-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.result-list > li {
+    background: #fff;
+    box-shadow: 0 1px #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.result-list > li:before,
+.result-list > li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.result-list > li + li {
+    margin-top: 10px;
+}
+.result-list > li > div {
+    display: table-cell;
+    vertical-align: top;
+    padding: 20px;
+    position: relative;
+}
+.result-list .result-image {
+    width: 240px;
+    padding: 0;
+    overflow: hidden;
+    background: @black;
+    vertical-align: middle;
+    display: table-cell;
+    background-size: cover;
+    background-position: center;
+}
+.result-list .result-image a {
+    display: block;
+}
+.result-list .result-image a:hover,
+.result-list .result-image a:focus {
+    opacity: 0.8;
+}
+.result-list .result-image img {
+    width: 100%;
+}
+.result-list .title {
+    margin: 0 0 0px;
+    font-size: 18px;
+    line-height: 26px;
+}
+.result-list .title a {
+    color: #2e353c;
+}
+.result-list .location {
+    color: @grey;
+    margin-bottom: 15px;
+}
+.result-list .desc {
+    margin-bottom: 20px;
+    max-height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 16px;
+}
+.result-list .btn-row:before,
+.result-list .btn-row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.result-list .btn-row a {
+    color: #2e353c;
+    font-size: 14px;
+    line-height: 18px;
+    float: left;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background: #f5f5f5;
+}
+.result-list .btn-row a:hover,
+.result-list .btn-row a:focus {
+    opacity: 1;
+}
+.result-list .btn-row a + a {
+    margin-left: 5px;
+}
+.result-list .result-price {
+    width: 240px;
+    font-size: 28px;
+    text-align: center;
+    background: #f5f5f5;
+    color: #2e353c;
+    vertical-align: middle;
+}
+.result-list .result-price small {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    color: @grey;
+}
+.result-list .result-price .btn {
+    margin-top: 30px;
+}

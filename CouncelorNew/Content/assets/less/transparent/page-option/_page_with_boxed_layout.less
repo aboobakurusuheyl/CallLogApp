@@ -1,0 +1,40 @@
+/* Option - Boxed Layout */
+
+.boxed-layout {
+    background-image: url(images/cover-pattern.png);
+}
+.boxed-layout .top-menu,
+.boxed-layout .pace {
+    width: 1080px;
+    left: 50%;
+    margin-left: -540px;
+}
+.boxed-layout .page-container {
+    width: 1080px;
+    margin: 0 auto;
+    box-shadow: 0 0px 30px rgba(0,0,0,0.5);
+    min-height: 100%;
+    background: none;
+    overflow: hidden;
+    position: relative;
+}
+.boxed-layout .page-container #header,
+.boxed-layout .page-container .sidebar,
+.boxed-layout .page-container .sidebar-bg {
+    left: auto;
+}
+.boxed-layout .page-container #header {
+    width: 1080px;
+    right: auto;
+}
+.boxed-layout .pace .pace-progress,
+.boxed-layout .pace .pace-activity,
+.boxed-layout .page-with-top-menu .top-menu {
+    position: absolute;
+}
+.boxed-layout .page-sidebar-minified .sidebar,
+.boxed-layout .page-with-top-menu.page-sidebar-minified .sidebar {
+    position: relative;
+    float: left;
+    padding-top: 0;
+}

@@ -1,0 +1,79 @@
+/* Page Content */
+
+.content {
+    margin-left: 220px;
+    padding: 20px 30px;
+    
+    &.content-full-width {
+		padding: 0;
+		
+		& .page-header,
+		& .breadcrumb {
+			position: relative;
+			z-index: 10;
+		}
+		& .page-header {
+			margin: 20px;
+		}
+		& .breadcrumb {
+			margin: 0 20px 0 0;
+			z-index: 20;
+		}
+	}
+	&.content-inverse-mode {
+		& h1,
+		& h2,
+		& h3,
+		& h4,
+		& h5,
+		& h6,
+		& .page-header,
+		& .breadcrumb a {
+			color: #fff;
+		}
+		& .breadcrumb > li,
+		& .page-header small {
+			color: rgba(255,255,255,0.75);
+		}
+	}
+}
+.page-content-full-height .content {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.page-header {
+    font-size: 24px;
+    margin: 0 0 15px;
+    padding: 0;
+    border: none;
+    line-height: 32px;
+    font-weight: 500;
+    
+	& small {
+		line-height: 20px;
+	}
+}
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: none;
+    
+	& > li {
+		line-height: 32px;
+		
+		& a {
+			color: @black_lighter;
+		}
+	}
+}
+.ie8 .breadcrumb > li {
+    display: inline;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	color: #ccc;
+}

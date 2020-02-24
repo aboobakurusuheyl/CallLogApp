@@ -1,0 +1,139 @@
+/* Plugin - jQuery Smart Wizard */
+
+.sw-main.sw-theme-default {
+	box-shadow: none;
+}
+.sw-main .nav-tabs {
+    background: #f5f5f5;
+    border-radius: 0;
+    display: table;
+    width: 100%;
+}
+.sw-main .nav-tabs > li {
+	display: inline-block;
+	float: none;
+	padding: 0;
+	margin: 0;
+}
+.sw-main > ul.step-anchor.nav-tabs > li > a {
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 15px 15px 15px;
+	margin: 0;
+	border-radius: 0;
+	color: #2e353c;
+}
+.sw-main > ul.step-anchor.nav-tabs > li.active > a {
+	color: #fff !important;
+	background: #2196F3 !important;
+}
+.sw-main > ul.step-anchor.nav-tabs > li.active > a .number {
+	background: rgba(0,0,0,0.2);
+}
+.sw-main > ul.step-anchor.nav-tabs > li > a .number {
+	float: left;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 10px;
+    top: 0;
+    background: #bec1c3;
+    color: #fff;
+    border-radius: 40px;
+    position: relative;
+}
+.sw-main > ul.step-anchor.nav-tabs > li > a .number + .info {
+	margin-left: 30px;
+	padding-right: 15px;
+	display: block;
+}
+.sw-theme-default > ul.step-anchor.nav-tabs > li > a small {
+	display: block;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 16px;
+	opacity: 0.75;
+}
+.sw-theme-default > ul.step-anchor > li > a::after {
+	display: none !important;
+}
+.sw-main .sw-container .step-content {
+	background: #fff;
+	padding: 30px;
+	border: none !important;
+}
+.sw-main .sw-toolbar {
+	background: #f5f5f5 !important;
+	padding: 15px !important;
+	display: block;
+}
+.sw-main .sw-toolbar:before,
+.sw-main .sw-toolbar:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.sw-main .sw-toolbar .btn {
+	border-radius: 4px !important;
+	min-width: 100px;
+}
+.sw-main .sw-toolbar .sw-btn-next,
+.sw-main .sw-toolbar .sw-btn-next.disabled,
+.sw-main .sw-toolbar .sw-btn-next.disabled:hover,
+.sw-main .sw-toolbar .sw-btn-next.disabled:focus {
+	color: #fff;
+    background: #2196F3;
+    border-color: #2196F3;
+}
+.sw-main .sw-toolbar .sw-btn-next:hover,
+.sw-main .sw-toolbar .sw-btn-next:focus {
+	background: #2a72b5;
+    border-color: #2a72b5;
+}
+.sw-main .sw-toolbar .sw-btn-prev,
+.sw-main .sw-toolbar .sw-btn-prev.disabled,
+.sw-main .sw-toolbar .sw-btn-prev.disabled:hover,
+.sw-main .sw-toolbar .sw-btn-prev.disabled:focus {
+	background: #fff;
+}
+.sw-main .sw-toolbar .btn + .btn {
+	margin-left: 10px;
+	border-left: none;
+}
+.sw-main .sw-btn-group {
+	margin: 0;
+	box-shadow: none;
+}
+.sw-main .sw-btn-group .btn {
+	box-shadow: 0 0 2px rgba(0,0,0,.2), 0 4px 4px -2px rgba(0,0,0,.2);
+}
+.sw-main .sw-btn-group .btn:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,.2), 0 6px 6px rgba(0,0,0,.23) !important;
+}
+.sw-main .sw-btn-group .btn.active,
+.sw-main .sw-btn-group .btn:active {
+	box-shadow: 0 0 2px rgba(0,0,0,.2), 0 4px 4px -2px rgba(0,0,0,.2) !important;
+}
+.sw-main.sw-theme-default > ul.step-anchor > li.done > a {
+	background: #e9edef !important;
+    color: #5b6165 !important;
+}
+.sw-main > ul.step-anchor.nav-tabs > li.done > a .number,
+.sw-main > ul.step-anchor.nav-tabs > li.done > a .number:before {
+	background: #2196F3 !important;
+}
+.sw-main > ul.step-anchor.nav-tabs > li.done > a .number:before {
+	content: '\f00c';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 40px;
+	color: #fff;
+}

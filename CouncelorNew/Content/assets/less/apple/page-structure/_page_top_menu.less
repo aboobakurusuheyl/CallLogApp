@@ -1,0 +1,230 @@
+/* Page Top Menu */
+
+.page-with-top-menu {
+    padding-top: 90px;
+    
+	& .sidebar {
+		padding-top: 90px;
+	}
+}
+.top-menu {
+    background: @black;
+    height: 40px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1015;
+    
+	& .nav {
+		white-space: nowrap;
+		display: block;
+	
+		& > li {
+			display: inline-block;
+			position: relative;
+			
+			& + li {
+				margin-left: -3px;
+			}
+			& > a {
+				padding: 10px 20px;
+				color: #aaa;
+				display: block;
+				line-height: 20px;
+				text-decoration: none;
+				
+				& .badge,
+				& .label {
+					margin-left: 5px;
+				}
+				& .badge {
+					background: #1b1f24;
+				}
+				& .icon-img {
+					float: left;
+					margin: -3px 12px -3px 0;
+					width: 26px;
+					height: 26px;
+					overflow: hidden;
+					border-radius: 4px;
+					
+					& img {
+						max-width: 100%;
+						max-height: 100%;
+						display: block;
+					}
+				}
+				& .badge.pull-right,
+				& .label.pull-right {
+					margin-top: 1px;
+				}
+				& i {
+					float: left;
+					margin: -3px 12px -3px 0;
+					width: 26px;
+					text-align: center;
+					line-height: 26px;
+					font-size: 24px;
+					border-radius: 6px;
+					color: #fff;
+					background: rgba(255,255,255,.2);
+				}
+				& .caret.pull-right {
+					margin-top: 8px;
+					margin-left: 5px;
+				}
+			}
+		}
+		& > li.active > a .label.label-theme,
+		& > li.active > a .badge {
+			background: rgba(0,0,0,0.4);
+		}
+		& > li.active > a i {
+			background: none;
+		}
+		& > li:hover > a,
+		& > li:focus > a,
+		& > li > a:hover,
+		& > li > a:focus {
+			background: none;
+			color: #fff;
+		}
+	}
+	& li > a .caret {
+		display: block;
+		float: right;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		font-size: 11px;
+		border: none;
+		
+		&:before {
+			content: '\f123';
+			display: block;
+			text-align: center;
+			transition: all .2s linear;
+			opacity: 0.5;
+		}
+	}
+}
+
+
+/* Page Top Menu - Sub Menu */
+
+.top-menu {
+	& .nav .sub-menu {
+		display: none;
+		position: absolute;
+		left: 0;
+		width: 220px;
+		top: 100%;
+		background: @black;
+		list-style-type: none;
+		margin: 0;
+		padding: 10px 0;
+	}
+	& .sub-menu > li > a {
+		padding: 5px 20px;
+		display: block;
+		color: #8a8f94;
+		text-decoration: none;
+		position: relative;
+	}
+	& .nav .sub-menu > li > a .caret {
+		margin-top: -1px;
+	}
+	& .sub-menu .sub-menu {
+		background: rgba(0,0,0,0.2);
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	& .sub-menu > li > a:hover,
+	& .sub-menu > li > a:focus,
+	& .sub-menu > li.active > a,
+	& .sub-menu > li.active > a:hover,
+	& .sub-menu > li.active > a:focus {
+		color: #fff;
+	}
+	& .nav > li.has-sub:hover > .sub-menu {
+		display: block;
+	}
+	& .nav > li.active > a,
+	& .nav > li.active > a:hover,
+	& .nav > li.active > a:focus{
+		background: #242a31;
+		color: #fff;
+	}
+}
+
+
+/* Page Top Menu - Left & Right Control */
+
+.top-menu .nav > li.menu-control {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    background: @black;
+    height: 40px;
+    margin: 0;
+    
+	& > a {
+		padding: 0;
+		text-align: center;
+		line-height: 40px;
+		
+		& i {
+			float: none;
+			margin: 0;
+			font-size: 18px;
+			display: block;
+			line-height: 40px;
+			color: #fff;
+			width: auto;
+			background: none;
+		}
+	}
+	&.menu-control-left {
+		left: -50px;
+		
+		&.show {
+			-webkit-animation: slideInLeft .2s;
+			animation: slideInLeft .2s;
+			left: 0;
+		}
+		& > a {
+			box-shadow: 5px 0 8px -3px rgba(0,0,0,0.5);
+		}
+	}
+	&.menu-control-right {
+		right: -50px;
+		
+		&.show {
+			-webkit-animation: slideInRight .2s;
+			animation: slideInRight .2s;
+			right: 0;
+		}
+		& > a {
+			box-shadow: -5px 0 8px -3px rgba(0,0,0,0.5);
+		}
+	}
+}
+@keyframes slideInLeft {
+    from { left: -50px; }
+    to { left: 0; }
+}
+@-webkit-keyframes slideInLeft {
+    from { left: -50px; }
+    to { left: 0; }
+}
+@keyframes slideInRight {
+    from { right: -50px; }
+    to { right: 0; }
+}
+@-webkit-keyframes slideInRight {
+    from { right: -50px; }
+    to { right: 0; }
+}

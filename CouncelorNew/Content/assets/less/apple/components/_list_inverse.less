@@ -1,0 +1,21 @@
+/* Component - Inverse List Group Item */
+
+.list-group-item {
+	border-color: #e2e7eb;
+	
+	&.list-group-item-inverse {
+		background: @black;
+		border-color: @black_darker;
+		color: #fff;
+		
+		&:hover, 
+		&:focus {
+			color: #fff;
+			background: @black_darker;
+		}
+		& .label-inverse, 
+		& .badge-inverse {
+			background: rgba(0,0,0,0.4);
+		}
+	}
+}

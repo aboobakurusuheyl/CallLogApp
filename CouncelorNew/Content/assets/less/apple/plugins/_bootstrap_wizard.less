@@ -1,0 +1,65 @@
+/* Plugin - Bootstrap Wizard */
+
+.bwizard-steps {
+    font-size: 14px !important;
+    border-radius: 3px !important;
+    overflow: hidden !important;
+    display: table !important;
+    width: 100% !important;
+    
+	& li {
+		float: none !important;
+		display: table-cell !important;
+		padding: 15px !important;
+		line-height: 20px !important;
+		background: #f0f3f4 !important;
+		border-radius: 0 !important;
+		
+		&:before,
+		&:after {
+			border: none !important;
+		}
+		&:hover,
+		&:focus {
+			background: #d3dadf !important;
+		}
+		& small {
+			font-size: 11px !important;
+			color: #999 !important;
+			display: block !important;
+			line-height: 14px !important;
+		}
+		& a {
+			margin-left: 30px !important;
+			display: block !important;
+			text-decoration: none !important;
+		}
+		&.active,
+		&.active:hover,
+		&.active:focus {
+			background: @green !important;
+		}
+		&.active small {
+			color: #b2e6e6 !important;
+		}
+		&.active .label {
+			background: rgba(0,0,0,0.2) !important;
+		}
+	}
+	&.clickable li:hover:not(.active) a,
+	&.clickable li:focus:not(.active) a {
+		color: @black_lighter !important;
+	}
+	& .label {
+		float: left !important;
+		padding: 0 !important;
+		height: 20px !important;
+		width: 20px !important;
+		line-height: 20px !important;
+		text-align: center !important;
+		margin-right: 10px !important;
+		top: 0 !important;
+		background: #6d7479 !important;
+		border-radius: 50% !important;
+	}
+}

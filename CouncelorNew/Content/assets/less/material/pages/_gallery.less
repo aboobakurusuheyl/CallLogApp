@@ -1,0 +1,77 @@
+/* Pages - Gallery */
+
+.gallery {
+    margin: -5px;
+}
+.gallery .image {
+    width: 25%;
+    display: block;
+    overflow: hidden;
+    padding: 5px;
+}
+.gallery .image a {
+    transition: all .2s linear;
+}
+.gallery .image a:hover,
+.gallery .image a:focus {
+    opacity: 0.8;
+}
+.gallery .image img {
+    width: 100%;
+    height: 200px;
+    border-radius: 3px 3px 0 0;
+}
+.gallery .image-inner {
+    position: relative;
+    background: #fff;
+    border-radius: 3px 3px 0 0;
+}
+.gallery .image-caption {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 5px 15px;
+    margin: 0;
+}
+.gallery .image-info {
+    background: #fff;
+    padding: 15px;
+    border-radius: 0 0 3px 3px;
+}
+.gallery .image-info .title {
+    margin: 0 0 10px;
+    line-height: 18px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gallery .image-info .rating {
+    line-height: 20px;
+    margin: 0 0 3px;
+}
+.gallery .image-info .desc {
+    line-height: 16px;
+    font-size: 13px;
+    height: 48px;
+    overflow: hidden;
+}
+.gallery .rating span.star {
+    display: inline-block;
+}
+.gallery .rating span.star:before {
+    content: "\f005";
+    color: @silver_darker;
+}
+.gallery .rating span.star.active:before {
+    color: @orange;
+}
+.gallery-option-set {
+    display: block;
+    margin-bottom: -5px;
+}
+.gallery-option-set .btn {
+    margin: 0 5px 5px 0;
+}

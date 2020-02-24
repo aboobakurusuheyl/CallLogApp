@@ -1,0 +1,36 @@
+/* Option - Page with Two Sidebar */
+
+.page-with-two-sidebar {
+	&.page-sidebar-fixed .sidebar.sidebar-right {
+		position: fixed;
+	}
+	& .sidebar.sidebar-right,
+	& .sidebar-bg.sidebar-right {
+		right: 0;
+		left: auto;
+	}
+	& .content {
+		margin-right: 220px;
+	}
+	&.page-sidebar-minified .sidebar.sidebar-right,
+	&.page-sidebar-minified .sidebar-bg.sidebar-right {
+		width: 220px;
+	}
+	&.page-right-sidebar-collapsed {
+		& .sidebar.sidebar-right,
+		& .sidebar-bg.sidebar-right {
+			right: -220px;
+		}
+		& .content {
+			margin-right: 0;
+		}
+		&.page-with-wide-sidebar .sidebar-bg.sidebar-right, 
+		&.page-with-wide-sidebar .sidebar.sidebar-right {
+			right: -250px;
+		}
+		& .content, 
+		&.page-with-wide-sidebar .content {
+			margin-right: 0;
+		}
+	}
+}

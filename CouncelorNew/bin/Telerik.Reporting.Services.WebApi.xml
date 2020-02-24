@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Reporting.Services.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Reporting.Services.WebApi.CacheFactory">
+            <summary>
+            Creates different built-in cache implementations.
+            </summary>
+            <remarks>
+            This class is now obsolete. Please use <see cref="T:Telerik.Reporting.Services.Engine.CacheFactory"/> instead.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.CacheFactory.CreateFileCache">
+            <summary>
+            Creates a new instance of file cache in a temp folder that will store cached data.
+            </summary>
+            <returns>The newly created cache instance.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.CacheFactory.CreateFileCache(System.String)">
+            <summary>
+            Creates a new instance of file cache that will store cached data in a directory of the file system.
+            </summary>
+            <param name="directory">The directory path that will be used from the cache as repository.</param>
+            <returns>The newly created cache instance.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.CacheFactory.CreateDatabaseCache(System.String,System.String)">
+            <summary>
+            Creates new instance of database cache that will store cached data in a database.
+            </summary>
+            <param name="backendName">Specifies which database engine should be used.</param>
+            <param name="connectionString">A connection string that should be used to connect to the cache database</param>
+            <returns>The newly created cache instance.</returns>
+            <remarks>In order to use a database cache you should firstly use the Database Cache Configuration Tool 
+            in order to create the underplaying database and its schema.<br />
+            Note that the database cache implementation relies on the Telerik OpenAccess 
+            so the following OpenAccess core libraries should be referenced: Telerik.OpenAccess.dll, Telerik.OpenAccess.35.Extensions.dll .
+            Proper assembly binding redirects might apply.<br />
+            See also: <conceptualLink target="5f8e6a6f-1160-4d59-9554-fe3a14e2a286">Configuring the Database Cache Provider</conceptualLink></remarks>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.ReportFileResolver">
+            <summary>
+            Creates an <see cref="T:Telerik.Reporting.UriReportSource"/> instance from relative path to .trdx/.trdp file
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.ReportResolverBase">
+            <summary>
+            Base report resolver with fallback mechanism
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportResolverBase.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Telerik.Reporting.Services.WebApi.ReportResolverBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportResolverBase.AddFallbackResolver(Telerik.Reporting.Services.Engine.IReportResolver)">
+            <summary>
+            Adds fallback resolver that will be used if the current resolver does not succeed.
+            </summary>
+            <param name="fallbackResolver">The fallback resolver</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportResolverBase.Telerik#Reporting#Services#Engine#IReportResolver#Resolve(System.String)">
+            <summary>
+            Creates a <see cref="T:Telerik.Reporting.ReportSource"/> based on its string representation.
+            </summary>
+            <param name="report">The string report representation to resolve</param>
+            <returns>The resulting report source</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportResolverBase.ResolveReport(System.String)">
+            <summary>
+            Creates a <see cref="T:Telerik.Reporting.ReportSource"/> based on its string representation.
+            </summary>
+            <remarks>
+            Override this member in order to implement the core resolve functionality.
+            </remarks>
+            <param name="report">The string report representation to resolve</param>
+            <returns>The resulting report source</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportFileResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Reporting.Services.WebApi.ReportFileResolver"/> class. 
+            Relative paths will be resolved against the application root.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportFileResolver.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Reporting.Services.WebApi.ReportFileResolver"/> class. 
+            </summary>
+            <param name="repositoryDirectory">Physical directory where .trdx reports are located. 
+            Used as path prefix when relative path is passed for resolving.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportFileResolver.ResolveReport(System.String)">
+            <summary>
+            Creates a <see cref="T:Telerik.Reporting.UriReportSource"/> based on its string representation.
+            </summary>
+            <remarks>
+            Accepts relative and absolute paths
+            </remarks>
+            <param name="report">The string report representation to resolve</param>
+            <returns>The resulting report source</returns>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.ReportTypeResolver">
+            <summary>
+            Resolves IReportDocument from report type name
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportTypeResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Reporting.Services.WebApi.ReportTypeResolver"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportTypeResolver.ResolveReport(System.String)">
+            <summary>
+            Creates a <see cref="T:Telerik.Reporting.TypeReportSource"/> from a report type name.
+            </summary>
+            <param name="report">Report type name</param>
+            <returns>The resulting report source</returns>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.ReportsControllerBase">
+            <summary>
+            Base API controller for exposing a WebAPI to the report engine
+            </summary>
+            <remarks>
+            A call to the <see cref="M:Telerik.Reporting.Services.WebApi.ReportsControllerConfiguration.RegisterRoutes(System.Web.Http.HttpConfiguration)"/> method 
+            must be added to the WebApiConfig.Register method so that the controller actions are accessible 
+            from the routing mechanisms of the ASP.Net WebAPI framework.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Reporting.Services.WebApi.ReportsControllerBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetDocumentFormats">
+            <summary>
+            Gets the available document formats.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.RegisterClient">
+            <summary>
+            Registers new HTTP service client
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.UnregisterClient(System.String)">
+            <summary>
+            Removes existing client of the HTTP service by its ID
+            </summary>
+            <remarks>
+            All cached data for the client will be cleared.
+            </remarks>
+            <param name="clientID">The ID of the client to be removed</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetParameters(System.String,Telerik.Reporting.Services.WebApi.ClientReportSource)">
+            <summary>
+            Gets the report parameters for a concrete client and report source
+            </summary>
+            <param name="clientID">The clientID for which the parameters are retrieved</param>
+            <param name="reportSource">The report source for which the parameters are retrieved</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.CreateInstance(System.String,Telerik.Reporting.Services.WebApi.ClientReportSource)">
+            <summary>
+            Creates a new report instance in a client session
+            </summary>
+            <param name="clientID">The clientID for which the instance is created</param>
+            <param name="reportSource">The report source which defines the report instance</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetReportInstanceKey(System.String)">
+            <summary>
+            Utility method. Resolves an instance ID to a report key.
+            </summary>
+            <returns>
+            ReportInstanceKey if available, otherwise null.
+            </returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.DeleteInstance(System.String,System.String)">
+            <summary>
+            Deletes a report instance in a client session
+            </summary>
+            <param name="clientID">The clientID for which the instance is deleted</param>
+            <param name="instanceID">The instanceID that is deleted</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.CreateDocument(System.String,System.String,Telerik.Reporting.Services.WebApi.CreateDocumentArgs)">
+            <summary>
+            Creates new document using specific format and format settings
+            </summary>
+            <param name="clientID">The clientID in which session the document is created</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="args">Arguments containing the document format and settings</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.DeleteDocument(System.String,System.String,System.String)">
+            <summary>
+            Deletes concrete document by its ID.
+            </summary>
+            <param name="clientID">The client session ID which contains the deleted document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the deleted document</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetDocumentInfo(System.String,System.String,System.String)">
+            <summary>
+            Gets info for a requested document
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetDocument(System.String,System.String,System.String)">
+            <summary>
+            Gets the document for a single-stream document formats
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.SendDocument(System.String,System.String,System.String,Telerik.Reporting.Services.WebApi.SendDocumentArgs)">
+            <summary>
+            Sends an e-mail message with attached document
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+            <param name="args">The mail message args</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.CreateMailMessage(Telerik.Reporting.Services.WebApi.SendDocumentArgs,Telerik.Reporting.Services.Engine.DocumentData)">
+            <summary>
+            Creates the mail message that will be used in SendDocument
+            </summary>
+            <param name="args">The args to use in the mail message</param>
+            <param name="result">The document to attach to the mail message</param>
+            <returns>Mail message</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.SendMailMessage(System.Net.Mail.MailMessage)">
+            <summary>
+            Sends an e-mail message containing a report document to its recipients. 
+            Override this method in order to effectively send the mail message.
+            </summary>
+            <remarks>
+            The default implementation of this method is empty. Override this method in order to use the feature.
+            </remarks>
+            <example>
+            <code lang="C#" source="CodeSnippets\MvcCS\Controllers\ReportsController.cs" region="SendMailMessage_Implementation" />
+            <code lang="VB" source="CodeSnippets\MvcVB\Controllers\ReportsController.vb" region="SendMailMessage_Implementation" />
+            </example>
+            <param name="mailMessage">The mail message to send</param>
+            <returns>The default value is NotImplemented.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.OnCreateDocument(Telerik.Reporting.Services.CreateDocumentEventArgs)">
+            <summary>
+            Called when document is requested, before rendering the document.
+            </summary>
+            <param name="args">The args describing the rendered document</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.OnGetDocument(Telerik.Reporting.Services.GetDocumentEventArgs)">
+            <summary>
+            Called when document is requested, before sending the response.
+            </summary>
+            <param name="args">The args describing the rendered document</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetResource(System.String,System.String)">
+            <summary>
+            Gets an embedded report viewer resource.
+            </summary>
+            <param name="folder">The folder in which the resource is.</param>
+            <param name="resourceName">The name of the resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetPage(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Gets a page from a document in a multi-stream document format
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+            <param name="pageNumber">The number of the requested page (1-based)</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetResource(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets a resource part of a document in multi-stream document format
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+            <param name="resourceID">The ID of the requested resource</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.ExecuteInteractiveAction(System.String,System.String,System.String,System.String)">
+            <summary>
+            Executes an interactive action that should be applied on the server
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the affected document</param>
+            <param name="actionID">The ID of the executed action</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetPageSettings(System.String,Telerik.Reporting.Services.WebApi.ClientReportSource)">
+            <summary>
+            Gets the report page settings for a concrete client and report source
+            </summary>
+            <param name="clientID">The clientID for which the page settings are retrieved</param>
+            <param name="reportSource">The report source for which the page settings are retrieved</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetSearchResults(System.String,System.String,System.String,Telerik.Reporting.Services.Engine.SearchArgs)">
+            <summary>
+            Retrieves the search metadata from resources and returns the search results that satisfy the passed arguments
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+            <param name="args">The arguments used to perform the search</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.CreateReportResolver">
+            <summary>
+            Creates an <see cref="T:Telerik.Reporting.Services.Engine.IReportResolver"/> implementation instance
+            that will be used for report resolving from the service
+            </summary>
+            <remarks>
+            Override this method in order to create the report resolver instance.
+            May be one of the built-in report resolvers or a custom implementation resolver. Built-in resolvers may be chained.
+            </remarks>
+            <seealso cref="T:Telerik.Reporting.Services.Engine.IReportResolver"/>
+            <seealso cref="T:Telerik.Reporting.Services.WebApi.ReportFileResolver"/>
+            <seealso cref="T:Telerik.Reporting.Services.WebApi.ReportTypeResolver"/>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.CreateCache">
+            <summary>
+            Creates an <see cref="T:Telerik.Reporting.Cache.Interfaces.ICache"/> implementation instance
+            that will be used for internal storage from the service.
+            </summary>
+            <remarks>
+            Override this method in order to create the cache instance.
+            May be one of the built-in caching implementations or a custom implementation.
+            To use one of the built-in caching implementations use the <seealso cref="T:Telerik.Reporting.Services.WebApi.CacheFactory"/> class.
+            </remarks>
+            <returns>An instance of cache that will be used from the controller in order to preserve its cache/state.</returns>
+            <seealso cref="T:Telerik.Reporting.Services.WebApi.CacheFactory"/>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.CreateStorage">
+            <summary>
+            Creates an <see cref="T:Telerik.Reporting.Cache.Interfaces.IStorage"/> implementation instance
+            that will be used for internal storage from the service.
+            </summary>
+            <remarks>
+            Override this method in order to create the storage instance.
+            May be one of the built-in storage implementations or a custom implementation.
+            <seealso cref="T:Telerik.Reporting.Cache.MsSqlServerStorage"/>
+            <seealso cref="T:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage"/>
+            </remarks>
+            <returns>An instance of storage that will be used from the controller in order to preserve its cache/state.</returns>
+            <seealso cref="T:Telerik.Reporting.Services.WebApi.CacheFactory"/> 
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.CreateErrorResponse(System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Creates error response to be sent to the client
+            </summary>
+            <param name="statusCode"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerBase.GetUserIdentity">
+            <summary>
+            Override this method to substitute the default <see cref="T:Telerik.Reporting.Processing.UserIdentity"/> retrieval logic,
+            which uses System.Web.HttpContext.Current.User.Identity
+            </summary>
+            <returns>The UserIdentity object instance, that can be later retrieved by 
+            <see cref="P:Telerik.Reporting.Processing.UserIdentity.Current"/> property or by using expression =UserIdentity</returns>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.ReportsControllerBase.ReportServiceConfiguration">
+            <summary>
+            Gets or sets the configuration of the report service.
+            </summary>
+            <remarks>
+            When inheriting the ReportsControllerBase controller basic configuration is needed.
+            Provide an object implementing the <see cref="T:Telerik.Reporting.Services.IReportServiceConfiguration"/>
+            in order to configure the report service. This should be done in the
+            controllers' constructor using static object to preserve the configuration
+            between requests or using dependency injection.
+            </remarks>
+            <example>
+            This example shows how to configure WebAPI service using dependency injection.<br/>
+            <br/>
+            1. Setup method registering the configuration object in a dependency injection container.
+            The example uses the <a href="https://www.nuget.org/packages/Unity/">Unity container</a>.
+            <code lang="C#" source="CodeSnippets\MvcCS\Controllers\ReportsControllerDependencyInjection.cs" region="ReportsControllerDependencyInjectionSetup"/>
+            <code lang="VB" source="CodeSnippets\MvcVB\Controllers\ReportsControllerDependencyInjection.vb" region="ReportsControllerDependencyInjectionSetup"/>
+            Example based on the article <a href="http://www.asp.net/web-api/overview/advanced/dependency-injection">Dependency Injection in ASP.NET Web API 2</a>
+            <br/>
+            2. ReportsController implementation
+            <code lang="C#" source="CodeSnippets\MvcCS\Controllers\ReportsControllerDependencyInjection.cs" region="ReportsControllerDependencyInjectionImplementation"/>
+            <code lang="VB" source="CodeSnippets\MvcVB\Controllers\ReportsControllerDependencyInjection.vb" region="ReportsControllerDependencyInjectionImplementation"/>
+            3. Invoke the setup in the Application_Start method
+            <code lang="C#" source="CodeSnippets\MvcCS\Controllers\ReportsControllerDependencyInjection.cs" region="ReportsControllerDependencyInjectionAppStart"/>
+            <code lang="VB" source="CodeSnippets\MvcVB\Controllers\ReportsControllerDependencyInjection.vb" region="ReportsControllerDependencyInjectionAppStart"/>
+            </example>
+            <seealso cref="T:Telerik.Reporting.Services.IReportServiceConfiguration"/>
+            <seealso cref="T:Telerik.Reporting.Services.ReportServiceConfiguration"/>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.ClientReportSource">
+            <summary>
+            Represents a report source passed to the ReportsControllerBase from its clients.
+            </summary>
+            <seealso cref="T:Telerik.Reporting.ReportSource"/>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.ClientReportSource.Report">
+            <summary>
+            Gets or sets a string representation of a report document reference
+            </summary>
+            <remarks>
+            The string representation should be of a <see cref="T:Telerik.Reporting.TypeReportSource"/> or of an <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            The rest of the report sources types are not supported.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.ClientReportSource.ParameterValues">
+            <summary>
+            Gets or sets a dictionary representing name-value pairs of parameter name and value passed to the reporting engine.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.CreateDocumentArgs">
+            <summary>
+            Represents the arguments passed to the CreateDocument method of the <see cref="T:Telerik.Reporting.Services.WebApi.ReportsControllerBase"/>
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.CreateDocumentArgs.Format">
+            <summary>
+            The rendering format of the created document
+            </summary>
+            <remarks>
+            See the full list of built-in formats in the help article
+            <conceptualLink target="935C2C81-69FB-4EE7-B104-C317A615D294">Rendering Extensions</conceptualLink>
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.CreateDocumentArgs.DeviceInfo">
+            <summary>
+            Device setting for the specified format
+            </summary>
+            <remarks>
+            More info on the device setting may be found in the help chapter
+            <conceptualLink target="7B7459C1-F91D-4220-BC72-68804CD6B554">Device Information Settings</conceptualLink>
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.CreateDocumentArgs.UseCache">
+            <summary>
+            Determines if the returned document should be returned from cached resources if available.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.CreateDocumentArgs.BaseDocumentID">
+            <summary>
+            Determines a base document from the cache that should service as interactivity blueprint.
+            </summary>
+            <remarks>
+            Applicable only when UseCache=true.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.CreateDocumentArgs.ActionID">
+            <summary>
+            Determines the server interactivity action that should be triggered over an existing document in order
+            to generate the new document.
+            </summary>
+            <remarks>
+            Applicable only when BaseDocumentID is provided.
+            </remarks>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.SendDocumentArgs">
+            <summary>
+            Represents the mail message arguments passed to the SendDocument method of the <see cref="T:Telerik.Reporting.Services.WebApi.ReportsControllerBase"/>
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.SendDocumentArgs.From">
+            <summary>
+            The mail message From part
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.SendDocumentArgs.To">
+            <summary>
+            The mail message To part
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.SendDocumentArgs.Cc">
+            <summary>
+            The mail message Cc part
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.SendDocumentArgs.Subject">
+            <summary>
+            The mail message Subject part
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Services.WebApi.SendDocumentArgs.Body">
+            <summary>
+            The mail message Body part
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.ReportsControllerConfiguration">
+            <summary>
+            Represents the report controller configuration.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerConfiguration.RegisterRoutes(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers report controller's routes in the application configuration.
+            </summary>
+            <param name="config">The application configuration to add the routes to</param>
+            <remarks>Registers report controller's routes with the default "api" first path segment.</remarks>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsControllerConfiguration.RegisterRoutes(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Registers report controller's routes in the application configuration.
+            </summary>
+            <param name="config">The application configuration to add the routes to</param>
+            <param name="firstPathSegment">The first path segment to include in the route template. 
+            For example, "api" is the default literal path segment in the "api/{controller}" route template.
+            Use this overload and pass a unique path segment (e.g. "reportingapi") to avoid collisions with other Web API services.
+            Then modify the report viewer client to use the custom service URL address.
+            </param>
+        </member>
+        <member name="T:Telerik.Reporting.Services.WebApi.ReportsExceptionFilter">
+            <summary>
+            Represents report controller's exception filter attribute.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.WebApi.ReportsExceptionFilter.OnException(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            Raises the exception event.
+            </summary>
+            <param name="context">The context for the action.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,62 @@
+/* Plugin - Bootstrap Daterangepicker */
+
+body .daterangepicker {
+	z-index: 1020 !important;
+}
+.daterangepicker:before {
+	display: none !important;
+}
+.daterangepicker td.active, 
+.daterangepicker td.active:hover,
+.daterangepicker td.active.available, 
+.daterangepicker td.active.available:hover {
+    background: @blue !important;
+    text-shadow: none !important;
+    color: #fff !important;
+}
+.daterangepicker table {
+	color: #2d353c;
+}
+.daterangepicker .calendar th {
+	color: #2d353c !important;
+}
+.daterangepicker .calendar th, 
+.daterangepicker .calendar td {
+    padding: 7px !important;
+    font-weight: 600;
+}
+.daterangepicker .ranges li {
+    color: #222 !important;
+    font-size: 12px;
+}
+.daterangepicker .ranges li.active, 
+.daterangepicker .ranges li:hover {
+    background: #2e353c !important;
+    border-color: #2e353c !important;
+    color: #fff !important;
+}
+.daterangepicker td.available:hover, 
+.daterangepicker th.available:hover {
+	background: #eee !important;
+	color: #2d353c !important;
+}
+.daterangepicker td.off, 
+.daterangepicker td.off.in-range, 
+.daterangepicker td.off.start-date, 
+.daterangepicker td.off.end-date {
+	background: none !important;
+	color: #ddd !important;
+}
+.daterangepicker td.off:hover,
+.daterangepicker td.off:focus {
+	background: #fff !important;
+	color: #ddd !important;
+}
+body .daterangepicker td.in-range {
+	background: #d6e7ff;
+}
+body .daterangepicker .input-mini.active {
+	border-color: #5db0ff;
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem rgba(52, 142, 227, 0.3);
+}

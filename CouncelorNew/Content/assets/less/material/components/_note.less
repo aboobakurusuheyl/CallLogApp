@@ -1,0 +1,74 @@
+/* Component - Note Setting */
+
+.note {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 3px solid;
+    position: relative;
+	border-radius: 4px;
+}
+.panel > .note {
+	border-radius: 0;
+}
+.note h1,
+.note h2,
+.note h3,
+.note h4,
+.note h5,
+.note h6 {
+	color: inherit;
+}
+.note .note-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 80px;
+	font-size: 56px;
+	line-height: 56px;
+	text-align: center;
+}
+.note .note-icon > i {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	margin-top: -28px;
+}
+.note .note-icon + .note-content {
+	margin-left: 85px;
+}
+.note.note-with-right-icon {
+	border-left: none;
+	border-right: 3px solid;
+}
+.note.note-with-right-icon .note-icon {
+	left: auto;
+	right: 0;
+}
+.note.note-with-right-icon .note-content {
+	margin-left: 0;
+	margin-right: 85px;
+}
+.note.note-danger { border-color: @red; background: #fcd0cd; color: #7a221b; }
+.note.note-danger .note-icon { background: @red; }
+.note.note-warning { border-color: @orange; background: #ffe5bf; color: #804c00; }
+.note.note-warning .note-icon { background: @orange; }
+.note.note-yellow { border-color: @yellow; background: #ffface; color: #806d00; }
+.note.note-yellow .note-icon { background: @yellow; }
+.note.note-lime { border-color: #8BC34A; background: #e2f0d2; color: #466225; }
+.note.note-lime .note-icon { background: #8BC34A; }
+.note.note-success { border-color: @green; background: #bfe5e1; color: #004b44; }
+.note.note-success .note-icon { background: @green; }
+.note.note-primary { border-color: #2196F3; background: #c2ddf7; color: #114b7a; }
+.note.note-primary .note-icon { background: #2196F3; }
+.note.note-info { border-color: #00BCD4; background: #bfeef4; color: #005e6a; }
+.note.note-info .note-icon { background: #00BCD4; }
+.note.note-purple { border-color: @purple; background: #e6c9eb; color: #4e1458; }
+.note.note-purple .note-icon { background: @purple; }
+.note.note-dark, .note.note-inverse { border-color: @black; background: #c7c7c7; color: #111111; }
+.note.note-dark .note-icon, .note.note-inverse .note-icon { background: @black; }
+.note.note-secondary, .note.note-default { border-color: @grey; background: #e7e7e7; color: #4f4f4f; }
+.note.note-secondary .note-icon, .note.note-default .note-icon { background: @grey; }
+.note.note-light { border-color: #F5F5F5; background: #fff; color: #666; }
+.note.note-light .note-icon { background: #F5F5F5; }

@@ -1,0 +1,103 @@
+/* Pages - Coming Soon */
+
+.coming-soon .brand {
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+}
+.coming-soon .brand .logo {
+    border: 25px solid transparent;
+    border-color: #394449 #2a3237 #1b2123;
+    position: relative;
+    width: 0;
+    height: 0;
+    display: block;
+    margin: 0 auto 5px;
+    vertical-align: middle;
+    border-radius: 8px;
+}
+.coming-soon .coming-soon-header .desc,
+.coming-soon .coming-soon-header .timer,
+.coming-soon .coming-soon-header .brand {
+    position: relative;
+    z-index: 1020;
+}
+.coming-soon .coming-soon-header {
+    background: url(images/coming-soon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0 50px;
+    position: relative;
+}
+.coming-soon .coming-soon-header:before {
+    background: #000;
+}
+.coming-soon .coming-soon-header .bg-cover {
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.75) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.75) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.75) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#bf000000',GradientType=0 );
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+.coming-soon .coming-soon-header .desc {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+    margin-bottom: 50px;
+}
+.coming-soon .coming-soon-header .timer {
+    margin-bottom: 0px;
+    padding: 10px 0;
+}
+.coming-soon .coming-soon-header .timer:before,
+.coming-soon .coming-soon-header .timer:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.coming-soon .timer .is-countdown {
+    background: none;
+    border: none;
+    width: 720px;
+    margin: 0 auto;
+}
+.coming-soon .timer .is-countdown .countdown-section {
+    padding: 0 10px;
+}
+.coming-soon .timer .is-countdown .countdown-section + .countdown-section {
+    border-left: 1px solid rgba(255,255,255,0.2);
+}
+.coming-soon .timer .countdown-amount {
+    font-size: 36px;
+    color: #fff;
+}
+.coming-soon .timer .countdown-period {
+    font-size: 14px;
+    color: #999;
+}
+.coming-soon a {
+    color: @green;
+}
+.coming-soon .coming-soon-content {
+    color: #333;
+    text-align: center;
+    padding: 25px 0;
+}
+.coming-soon .coming-soon-content .desc {
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+.coming-soon .coming-soon-content .input-group {
+    width: 480px;
+    margin: 0 auto;
+}

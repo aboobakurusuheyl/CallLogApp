@@ -1,0 +1,158 @@
+/* Pages - Email Inbox */
+
+.list-email {
+	margin: -1px 0;
+    border-top: 1px solid #e2e7eb;
+    border-bottom: 1px solid #e2e7eb;
+}
+.list-email > li.list-group-item {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0px;
+}
+.list-email > li.list-group-item {
+    padding: 15px 15px 15px 20px;
+    position: relative;
+}
+.list-email > li.list-group-item + li.list-group-item {
+    border-top: 1px solid #e2e7eb;
+}
+.list-email > li.list-group-item:before,
+.list-email > li.list-group-item:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.list-email .email-info,
+.list-email .email-sender,
+.list-email .email-info > a {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+}
+.list-email .email-info {
+	position: relative;
+	padding-right: 100px;
+}
+.list-email .email-user {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #6e7179;
+    background: @silver_lighter;
+    margin: -5px 0;
+}
+.list-email .email-user img {
+    max-width: 100%;
+    display: block;
+}
+.list-email .email-user + .email-info {
+    margin-left: 45px;
+}
+.list-email .email-checkbox + .email-user + .email-info {
+    margin-left: 68px;
+}
+.list-email .email-checkbox + .email-info {
+    margin-left: 23px;
+}
+.list-email .email-title {
+    line-height: 20px;
+}
+.list-email .unread .email-title {
+	color: #2b71b5;
+	font-weight: 600;
+}
+.list-email .email-title + .email-desc {
+	padding-left: 20px;
+}
+.list-email .email-title + .email-desc:before {
+	content: '';
+	position: absolute;
+	left: 6px;
+	top: 7px;
+	width: 6px;
+	height: 6px;
+	background: #d9dfe3;
+	border-radius: 6px;
+}
+.list-email .email-desc {
+	position: relative;
+	color: #5c656d;
+}
+.list-email .email-sender {
+	width: 230px;
+	float: left;
+	padding-right: 15px;
+}
+.list-email .unread .email-sender {
+	font-weight: 600;
+}
+.list-email .email-title .label {
+    position: relative;
+    top: -1px;
+}
+.list-email a {
+    color: @black_darker;
+    text-decoration: none;
+}
+.list-email .email-info,
+.list-email .email-info > a {
+	display: block;
+	margin-top: -15px;
+	margin-bottom: -15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.list-email .email-info > a {
+	margin-right: -115px;
+	padding-right: 100px;
+	position: relative;
+}
+.list-email .email-time {
+	position: absolute;
+	width: 100px;
+	padding: 15px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+    font-size: 11px;
+    color: #9ba3ab;
+    text-align: right;
+}
+.list-email .email-checkbox {
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: -5px 5px -5px -12px;
+}
+.list-email .email-checkbox label {
+    color: #e2e7eb;
+    display: block;
+    cursor: pointer;
+}
+.list-email .email-checkbox label input[type=checkbox] {
+    display: none;
+}
+.list-email .email-checkbox label i {
+    font-size: 16px;
+    display: block;
+    line-height: 30px;
+    transition: all .2s linear;
+}
+.list-email .email-checkbox label.active {
+    color: #2e353c;
+}
+.list-email .email-checkbox label.active i:before {
+    content: '\f14a';
+}
+.list-email > li.selected {
+    background: #e2e7ec;
+}

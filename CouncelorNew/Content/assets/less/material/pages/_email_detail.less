@@ -1,0 +1,52 @@
+/* Pages - Email Detail */
+
+.attached-document {
+    list-style-type: none;
+    margin: 15px 0 0;
+    padding: 0;
+}
+.attached-document > li {
+    width: 180px;
+    float: left;
+    background: #fff;
+    color: #2e353c;
+    font-weight: 600;
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #d9dfe5;
+}
+.attached-document > li:before {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    font-size: 13px;
+    background: #d9dfe5;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+.attached-document > li img {
+    max-width: 100%;
+}
+.attached-document > li .document-name {
+    padding: 5px 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #f1f3f4;
+}
+.attached-document > li .document-name a {
+    color: @black;
+}
+.attached-document > li .document-file {
+    height: 70px;
+    background: none;
+    overflow: hidden;
+    text-align: center;
+    line-height: 70px;
+    font-size: 32px;
+    margin: -1px;
+}

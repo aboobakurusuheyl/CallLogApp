@@ -1,0 +1,25 @@
+/* Plugin - jQuery Simple Colorpicker */
+
+.simplecolorpicker {
+	z-index: 1010 !important;
+}
+.simplecolorpicker.icon, .simplecolorpicker span.color {
+	border-radius: 4px;
+	width: 19px;
+}
+.simplecolorpicker.fontawesome span.color[data-selected]:after {
+	display: block;
+	text-align: center;
+}
+.simplecolorpicker.glyphicons span.color[data-selected]:after {
+	content: '\f00c' !important;
+	margin-left: 2px !important;
+	top: 0 !important;
+}
+.simplecolorpicker span.color:focus,
+.simplecolorpicker.icon:focus {
+    outline: none !important;
+}
+.simplecolorpicker.inline {
+    padding: 5px 0 0 !important;
+}

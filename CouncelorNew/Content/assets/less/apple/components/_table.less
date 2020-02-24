@@ -1,0 +1,187 @@
+/* Component - Table */
+
+.table {
+    border-color: #ececec;
+    border-radius: 3px;
+    background: none;
+    
+    &.table-inverse {
+        background: none;
+    }
+    & thead th,
+    & > thead > tr > th {
+        color: @black;
+        font-weight: 600;
+        border-bottom: 1px solid #bbb !important;
+    }
+    & > thead > tr > th, 
+    & > tbody > tr > th, 
+    & > tfoot > tr > th, 
+    & > thead > tr > td, 
+    & > tbody > tr > td, 
+    & > tfoot > tr > td {
+        border-color: #ddd;
+        padding: 10px 15px;
+    }
+    &.table-inverse {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    &.table-inverse > thead > tr > th, 
+    &.table-inverse > tbody > tr > th, 
+    &.table-inverse > tfoot > tr > th {
+        color: #fff;
+    }
+    &.table-inverse > thead > tr > th, 
+    &.table-inverse > tbody > tr > th, 
+    &.table-inverse > tfoot > tr > th, 
+    &.table-inverse > thead > tr > td, 
+    &.table-inverse > tbody > tr > td, 
+    &.table-inverse > tfoot > tr > td {
+        border-color: #444 !important;
+        border-color: rgba(255, 255, 255, 0.15) !important;
+        background: none !important;
+    }
+    & > thead > tr > td.info, 
+    & > tbody > tr > td.info, 
+    & > tfoot > tr > td.info, 
+    & > thead > tr > th.info, 
+    & > tbody > tr > th.info, 
+    & > tfoot > tr > th.info, 
+    & > thead > tr.info > td, 
+    & > tbody > tr.info > td, 
+    & > tfoot > tr.info > td, 
+    & > thead > tr.info > th, 
+    & > tbody > tr.info > th, 
+    & > tfoot > tr.info > th {
+        background: #d6f1fe;
+        border-color: #96bacc;
+        color: #2d647d;
+    }
+    & > thead > tr > td.success, 
+    & > tbody > tr > td.success, 
+    & > tfoot > tr > td.success, 
+    & > thead > tr > th.success, 
+    & > tbody > tr > th.success, 
+    & > tfoot > tr > th.success, 
+    & > thead > tr.success > td, 
+    & > tbody > tr.success > td, 
+    & > tfoot > tr.success > td, 
+    & > thead > tr.success > th, 
+    & > tbody > tr.success > th, 
+    & > tfoot > tr.success > th {
+        background: #d2f5d8;
+        border-color: #97b99c;
+        color: #266d32;
+    }
+    & > thead > tr > td.danger, 
+    & > tbody > tr > td.danger, 
+    & > tfoot > tr > td.danger, 
+    & > thead > tr > th.danger, 
+    & > tbody > tr > th.danger, 
+    & > tfoot > tr > th.danger, 
+    & > thead > tr.danger > td, 
+    & > tbody > tr.danger > td, 
+    & > tfoot > tr.danger > td, 
+    & > thead > tr.danger > th, 
+    & > tbody > tr.danger > th, 
+    & > tfoot > tr.danger > th {
+        background: #ffcecb;
+        border-color: #d8a6a3;
+        color: #801e18;
+    }
+    & > thead > tr > td.warning, 
+    & > tbody > tr > td.warning, 
+    & > tfoot > tr > td.warning, 
+    & > thead > tr > th.warning, 
+    & > tbody > tr > th.warning, 
+    & > tfoot > tr > th.warning, 
+    & > thead > tr.warning > td, 
+    & > tbody > tr.warning > td, 
+    & > tfoot > tr.warning > td, 
+    & > thead > tr.warning > th, 
+    & > tbody > tr.warning > th, 
+    & > tfoot > tr.warning > th {
+        background: #ffe4bf;
+        border-color: #ccb392;
+        color: #804b00;
+    }
+    & > thead > tr > td.active, 
+    & > tbody > tr > td.active, 
+    & > tfoot > tr > td.active, 
+    & > thead > tr > th.active, 
+    & > tbody > tr > th.active, 
+    & > tfoot > tr > th.active, 
+    & > thead > tr.active > td, 
+    & > tbody > tr.active > td, 
+    & > tfoot > tr.active > td, 
+    & > thead > tr.active > th, 
+    & > tbody > tr.active > th, 
+    & > tfoot > tr.active > th {
+        background: #e2e2e3;
+        border-color: #b5b5b9;
+        color: #454548;
+    }
+    & > caption+thead > tr:first-child > td, 
+    & > caption+thead > tr:first-child > th, 
+    & > colgroup+thead > tr:first-child > td, 
+    & > colgroup+thead > tr:first-child > th, 
+    & > thead:first-child > tr:first-child > td, 
+    & > thead:first-child > tr:first-child > th {
+        border-top: 0;
+    }
+    &.table-bordered > thead:first-child > tr:first-child > td, 
+    &.table-bordered > thead:first-child > tr:first-child > th {
+        border-top: 1px solid #e2e7eb;
+    }
+    & .with-form-control .form-control,
+    & .with-input-group .input-group {
+        margin-top: -8px;
+        margin-bottom: -8px;
+    }
+    & .with-img img,
+    & .with-btn .btn,
+    & .with-btn-group .btn-group {
+        margin-top: -8px;
+        margin-bottom: -7px;
+    }
+    & .with-checkbox .checkbox,
+    & .with-radio .radio {
+        margin: 0;
+        padding: 0;
+    }
+    & .with-checkbox .checkbox-css label,
+    & .with-radio .radio-css label {
+        min-height: inherit;
+    }
+    & .with-checkbox .checkbox-css input + label:before,
+    & .with-checkbox .checkbox-css input:checked + label:after,
+    & .with-radio .radio-css input + label:before {
+        top: 0;
+    }
+    & .with-radio .radio-css input:checked + label:after {
+        top: 5px;
+    }
+}
+.table-hover > tbody > tr:hover > td, 
+.table-hover > tbody > tr:hover > th {
+    background: #ececec !important;
+}
+.table-striped > tbody > tr:nth-child(odd) > td, 
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background: #f1f1f1;
+}
+.table-condensed {
+    &.table > thead > tr > th, 
+    &.table > tbody > tr > th, 
+    &.table > tfoot > tr > th, 
+    &.table > thead > tr > td, 
+    &.table > tbody > tr > td, 
+    &.table > tfoot > tr > td {
+        padding: 7px 15px;
+    }
+    &.table .with-form-control .form-control,
+    &.table .with-input-group .input-group {
+        margin-top: -6px;
+        margin-bottom: -5px;
+    }
+}

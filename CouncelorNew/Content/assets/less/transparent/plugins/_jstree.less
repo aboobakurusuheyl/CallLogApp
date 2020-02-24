@@ -1,0 +1,54 @@
+/* Plugin - Jstree */
+
+.jstree-default .jstree-clicked,
+.jstree-default .jstree-wholerow-clicked {
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: none !important;
+}
+.jstree-default .jstree-hovered,
+.jstree-default .jstree-wholerow-hovered {
+    background: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: none !important;
+}
+.jstree-open > .jstree-anchor > .fa-folder:before {
+    content: '\f07c';
+    color: rgba(255, 255, 255, 0.5);
+}
+.jstree-default .jstree-checkbox {
+    background: none;
+}
+.jstree-default .jstree-checkbox:before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px solid #888;
+    display: block;
+    background: @black_lighter;
+}
+.jstree-default .jstree-anchor > .jstree-checkbox.jstree-undetermined:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    top: 7px;
+    display: block;
+    background: #bbb;
+}
+.jstree-default.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:after, 
+.jstree-default .jstree-checked > .jstree-checkbox:after {
+    content: '\f00c';
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    top: 5px;
+    display: block;
+    line-height: 16px;
+    font-size: 12px;
+    font-style: initial;
+    color: rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,55 @@
+/* Pages - Map */
+
+.map {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 220px;
+    right: 0;
+    z-index: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+	
+	& .jvectormap-zoomin {
+		top: 70px;
+	}
+	& .jvectormap-zoomout {
+		top: 100px;
+	}
+	& .jvectormap-zoomin,
+	& .jvectormap-zoomout {
+		width: 20px !important;
+		height: 20px !important;
+		font-size: 14px;
+		line-height: 20px !important;
+		left: 20px !important;
+	}
+}
+.map-content {
+    padding: 0 25px;
+    z-index: 100;
+    position: relative;
+}
+.map-float-table {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    background: rgba(33, 33, 33, 0.8);
+}
+.page-with-wide-sidebar .map {
+	left: 250px;
+}
+.page-with-right-sidebar .map {
+	right: 220px;
+	left: 0;
+}
+.page-with-wide-sidebar.page-with-right-sidebar .map {
+	right: 250px;
+	left: 0;
+}
+.page-sidebar-minified .map {
+    left: 60px;
+}
+.page-with-right-sidebar.page-sidebar-minified .map {
+	right: 60px;
+}

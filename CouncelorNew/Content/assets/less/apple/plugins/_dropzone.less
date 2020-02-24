@@ -1,0 +1,62 @@
+/* Plugin - Dropzone */
+
+.dropzone {
+    border: 2px dashed #bbb !important;
+    background: none !important;
+    
+    &.dz-clickable {
+		& .dz-message, 
+		& .dz-message * {
+			cursor: pointer !important;
+		}
+		&:hover,
+		&:focus {
+			background: #f1f1f1 !important;
+		}
+		&.dz-started:hover,
+		&.dz-started:focus {
+			background: none !important;
+		}
+	}
+	& .dz-message {
+		font-weight: 300 !important;
+		letter-spacing: 0.5px;
+		color: inherit !important;
+		font-size: 28px !important;
+		text-align: center !important;
+		margin: 45px 0 !important;
+		
+		& .dz-note {
+			font-size: 14px !important;
+			font-weight: normal !important;
+			display: block !important;
+			margin-top: 20px !important;
+			color: #707478 !important;
+		}
+	}
+	& .dz-preview {
+		&.dz-image-preview {
+			background: none !important;
+		}
+		& .dz-error-message {
+			background: @red !important;
+		}
+		& .dz-error-message:after {
+			border-bottom-color: @red !important;
+		}
+	}
+}
+.inverse-mode .dropzone {
+	border-color: rgba(255,255,255,0.25) !important;
+	
+	&.dz-clickable:hover,
+	&.dz-clickable:focus {
+		background: rgba(255,255,255,0.15) !important;
+	}
+	& .dz-message {
+		color: inherit !important;
+	}
+	& .dz-message .dz-note {
+		color: rgba(255,255,255,0.75) !important;
+	}
+}

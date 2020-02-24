@@ -1,0 +1,169 @@
+/* Plugin - Fullcalendar */
+
+.fc-event,
+.fc .fc-event {
+    border: none;
+    background: @black;
+    border-radius: 0;
+}
+.fc .fc-highlight {
+	background: #ccc;
+}
+.fc .fc-day-grid-event {
+    padding: 1px 2px;
+}
+.fc .fc-view-container {
+	background: #fff;
+}
+.fc.fc-unthemed .fc-today {
+    background: #fffce4;
+}
+.fc a.fc-event:not([href]):not([tabindex]) {
+	color: #fff;
+}
+.fc-row .fc-content-skeleton td.fc-today, 
+.fc-row .fc-helper-skeleton td.fc-today {
+	background: none;
+}
+.fc-event-list .fc-event {
+    background: none;
+    border: none;
+    color: @black_darker;
+    padding: 7px 10px 7px 35px;
+    font-size: 13px;
+    line-height: 16px;
+    position: relative;
+    background: #fff;
+    margin-bottom: 5px;
+    border-radius: 6px;
+}
+.fc-event-list .fc-event:hover,
+.fc-event-list .fc-event:focus {
+    color: @black_darker;
+    cursor: pointer;
+    background: #fff;
+}
+.fc-event-list .fc-event:hover:before,
+.fc-event-list .fc-event:focus:before {
+    background: #ccc;
+    color: #222;
+}
+.fc-event-list .fc-event i {
+    float: left;
+    line-height: 18px;
+}
+.fc-event-list .fc-event + .fc-event {
+    margin-top: -1px;
+}
+.fc-event-list .fc-event.ui-draggable:before {
+    content: '\f0b2';
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 25px;
+    text-align: center;
+    line-height: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background: @grey_lighter;
+    border-radius: 6px 0 0 6px;
+    color: #999;
+    font-size: 14px;
+}
+.fc-event-list .fc-event.ui-draggable-dragging {
+    border: 1px dashed #ddd;
+}
+.fc-event-list .fc-event-icon {
+	float: right;
+    margin-left: 10px;
+}
+body .fc button {
+    font-weight: 400;
+    color: @black_darker;
+    background: #fff;
+    padding: 5px 10px;
+    height: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+    border: none;
+    text-shadow: none;
+    position: initial;
+    box-shadow: none;
+}
+body .fc button + button {
+    border-left: 1px solid #eee;
+}
+body .fc button:active, 
+body .fc button:focus,
+body .fc button:hover {
+    background: #fff;
+    outline: none;
+}
+body .fc button:hover {
+	color: @black;
+}
+body .fc button.fc-state-disabled:active, 
+body .fc button.fc-state-disabled:focus,
+body .fc button.fc-state-disabled:hover {
+    background: #fff;
+}
+body .fc button.fc-state-active {
+	color: #fff;
+    background: @black;
+    border-color: @black;
+    box-shadow: none;
+}
+.fc.fc-unthemed .fc-content,
+.fc.fc-unthemed .fc-divider, 
+.fc.fc-unthemed .fc-popover, 
+.fc.fc-unthemed .fc-row, 
+.fc.fc-unthemed tbody, 
+.fc.fc-unthemed td, 
+.fc.fc-unthemed th, 
+.fc.fc-unthemed thead {
+    border-color: #d0d0d0;
+}
+.fc th {
+    padding: 2px 15px !important;
+    color: @black_darker;
+    font-weight: 600;
+    background: #eee;
+}
+.fc button .fc-icon {
+    margin: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    font-size: 13px;
+}
+.fc .fc-icon-left-single-arrow:after,
+.fc .fc-icon-right-single-arrow:after {
+    content: '\f0d9';
+    font-size: 13px;
+    margin: 0;
+    top: 1px;
+}
+.fc .fc-icon-right-single-arrow:after {
+    content: "\f0da";
+}
+.fc .fc-unthemed .fc-today {
+    background: #FFF8F0;
+}
+.fc .fc-scroller {
+    overflow: initial;
+    height: auto !important;
+}
+.fc .fc-toolbar {
+	margin-bottom: 0 !important;
+}
+.fc .fc-toolbar h2 {
+    font-size: 22px;
+    line-height: 28px;
+}
+.fc .fc-toolbar > * > * {
+	margin-bottom: 15px !important;
+}
+

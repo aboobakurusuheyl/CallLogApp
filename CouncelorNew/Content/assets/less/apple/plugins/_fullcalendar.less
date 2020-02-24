@@ -1,0 +1,174 @@
+/* Plugin - Fullcalendar */
+
+.fc-event,
+.fc .fc-event {
+    border: none;
+    background: @black;
+    border-radius: 0;
+}
+.fc {
+	& .fc-highlight {
+		background: #cdd3de;
+	}
+	& .fc-day-grid-event {
+		padding: 1px 2px;
+	}
+	& .fc-view-container {
+		background: #fff;
+	}
+	&.fc-unthemed .fc-today {
+		background: #fffce4;
+	}
+	& a.fc-event:not([href]):not([tabindex]) {
+		color: #fff;
+	}
+	
+	&.fc-unthemed .fc-content,
+	&.fc-unthemed .fc-divider, 
+	&.fc-unthemed .fc-popover, 
+	&.fc-unthemed .fc-row, 
+	&.fc-unthemed tbody, 
+	&.fc-unthemed td, 
+	&.fc-unthemed th, 
+	&.fc-unthemed thead {
+		border-color: #ddd;
+	}
+	& th {
+		padding: 2px 15px !important;
+		color: @black;
+		font-weight: 600;
+		background: #e8ecf1;
+	}
+	& button .fc-icon {
+		margin: 0;
+		top: 0;
+		width: auto;
+		height: auto;
+		font-size: 12px;
+	}
+	& .fc-icon-left-single-arrow:after,
+	& .fc-icon-right-single-arrow:after {
+		content: '\f0d9';
+		font-size: 12px;
+		margin: 0;
+		top: 1px;
+	}
+	& .fc-icon-right-single-arrow:after {
+		content: "\f0da";
+	}
+	& .fc-unthemed .fc-today {
+		background: #FFF8F0;
+	}
+	& .fc-scroller {
+		overflow: initial;
+		height: auto !important;
+	}
+	& .fc-toolbar {
+		margin-bottom: 0 !important;
+		
+		& h2 {
+			font-size: 22px;
+			line-height: 28px;
+		}
+		& > * > * {
+			margin-bottom: 15px !important;
+		}
+	}
+}
+.fc-row .fc-content-skeleton td.fc-today, 
+.fc-row .fc-helper-skeleton td.fc-today {
+	background: none;
+}
+.fc-event-list .fc-event {
+    background: none;
+    border: none;
+    color: @black;
+    padding: 7px 10px 7px 35px;
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+    background: #fff;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    
+	&:hover,
+	&:focus {
+		color: @black;
+		cursor: pointer;
+		background: #fff;
+	}
+	&:hover:before,
+	&:focus:before {
+		background: #cdd5da;
+		color: @black;
+	}
+	& i {
+		float: left;
+		line-height: 18px;
+	}
+	& + .fc-event {
+		margin-top: -1px;
+	}
+	&.ui-draggable:before {
+		content: '\f0b2';
+		font-family: Font Awesome\ 5 Free;
+		font-weight: 900;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 25px;
+		text-align: center;
+		line-height: 16px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		background: #e6eaec;
+		border-radius: 6px 0 0 6px;
+		color: #a2a7ab;
+		font-size: 14px;
+	}
+	&.ui-draggable-dragging {
+		border: 1px dashed #D2D6DA;
+	}
+}
+.fc-event-list .fc-event-icon {
+	float: right;
+    margin-left: 10px;
+}
+body .fc button {
+    font-weight: 400;
+    color: @black;
+    background: #fff;
+    padding: 5px 10px;
+    height: inherit;
+    font-size: 12px;
+    line-height: 1.5;
+    border: none;
+    text-shadow: none;
+    position: initial;
+    box-shadow: none;
+    
+	& + button {
+		border-left: 1px solid #e2e7eb;
+	}
+	&:active, 
+	&:focus,
+	&:hover {
+		background: #fff;
+		outline: none;
+	}
+	&:hover {
+		color: #348ee3;
+	}
+	&.fc-state-disabled:active, 
+	&.fc-state-disabled:focus,
+	&.fc-state-disabled:hover {
+		background: #fff;
+	}
+	&.fc-state-active {
+		color: #fff;
+		background: @black;
+		border-color: @black;
+		box-shadow: none;
+	}
+}

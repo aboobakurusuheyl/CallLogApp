@@ -1,0 +1,183 @@
+/* Component - Button */
+
+.btn {
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 6px 12px;
+    transition: all .1s ease-in-out;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.btn:focus, 
+.btn:active:focus, 
+.btn.active:focus {
+    outline: none;
+}
+.btn:active,
+.btn.active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+.btn-block {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.btn.btn-sm {
+	font-size: 12px;
+	line-height: 16px;
+	padding: 5px 10px;
+}
+.btn.btn-xs {
+	font-size: 12px;
+	line-height: 18px;
+	padding: 1px 5px;
+}
+.btn[class*="btn-gradient-"] {
+    transition: background .1s linear;
+}
+.btn.btn-lg,
+.input-group-lg > .input-group-append > .btn,
+.input-group-lg > .input-group-prepend > .btn {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 10px 16px;
+}
+.btn-icon,
+.btn.btn-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+}
+.btn-circle,
+.btn.btn-circle {
+    border-radius: 100px;
+}
+.btn-icon.btn-xs {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+    line-height: 16px;
+}
+.btn-icon.btn-sm {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    line-height: 22px;
+}
+.btn.btn-icon.btn-lg {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+    line-height: 34px;
+}
+.btn-scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1020;
+}
+.page-with-right-sidebar .btn-scroll-to-top {
+    left: 25px;
+    right: auto;
+}
+.btn > .pull-left, 
+.btn > .pull-right {
+    line-height: 1.428571429;
+}
+.input-group-prepend .btn {
+	border-right: 1px solid;
+}
+.input-group-append .btn {
+	border-left: 1px solid;
+}
+
+
+/* Component - Button - Default */
+.generate-button-styling(btn-default; #f2f3f4; #2e353c; @grey_lighter);
+
+/* Component - Button - Inverse */
+.generate-button-styling(btn-inverse; @black; #fff; @black_darker);
+
+/* Component - Button - Primary */
+.generate-button-styling(btn-primary; @blue; #fff; @blue_darker);
+
+/* Component - Button - Success */
+.generate-button-styling(btn-success; @green; #fff; @green_darker);
+
+/* Component - Button - Warning */
+.generate-button-styling(btn-warning; @orange; #fff; @orange_darker);
+
+/* Component - Button - Danger */
+.generate-button-styling(btn-danger; @red; #fff; @red_darker);
+
+/* Component - Button - Info */
+.generate-button-styling(btn-info; @aqua; #fff; @aqua_darker);
+
+/* Component - Button - Purple */
+.generate-button-styling(btn-purple; @purple; #fff; #555d88);
+
+/* Component - Button - Yellow */
+.generate-button-styling(btn-yellow; @yellow; #000; @yellow_darker);
+
+/* Component - Button - Grey */
+.generate-button-styling(btn-grey; @grey; #fff; #889197);
+
+/* Component - Button - Lime */
+.generate-button-styling(btn-lime; @lime; #fff; @lime_darker);
+
+/* Component - Button - White */
+.btn.btn-white,
+.btn.btn-white.disabled,
+.btn.btn-white.disabled:hover,
+.btn.btn-white.disabled:focus,
+.btn.btn-white[disabled],
+.btn.btn-white[disabled]:hover,
+.btn.btn-white[disabled]:focus {
+    color: @black;
+    background: #fff;
+    border-color: #d9dfe3;
+}
+.btn.btn-white.btn-white-without-border {
+    border-color: #fff;
+}
+.btn.btn-white.btn-white-without-border.active,
+.btn.btn-white.btn-white-without-border.active:hover,
+.btn.btn-white.btn-white-without-border.active:focus {
+    border-color: #d9dfe3;
+}
+.btn.btn-white.btn-white-without-border:hover,
+.btn.btn-white.btn-white-without-border:focus {
+    border-color: #d9dfe3;
+}
+.btn-white:hover, 
+.btn-white:focus, 
+.btn-white:active, 
+.btn-white.active,
+.btn-white.active.focus, 
+.btn-white.active:focus, 
+.btn-white.active:hover, 
+.btn-white:active.focus, 
+.btn-white:active:focus, 
+.btn-white:active:hover,
+.show > .btn-white.dropdown-toggle,
+.open > .dropdown-toggle.btn-white,
+.open > .dropdown-toggle.btn-white:hover,
+.open > .dropdown-toggle.btn-white:focus,
+.btn-white:not(:disabled):not(.disabled).active, 
+.btn-white:not(:disabled):not(.disabled):active {
+    background: #e2e7eb;
+    border-color: #d9dfe3;
+}
+.input-group-append .btn.btn-white,
+.btn-group .btn.btn-white:not(.active) + .btn.btn-white,
+.input-group-btn .btn.btn-white:not(.active) + .btn.btn-white {
+    border-left-color: #d9dfe3;
+}
+.input-group-prepend .btn.btn-white {
+    border-right-color: #d9dfe3;
+}
